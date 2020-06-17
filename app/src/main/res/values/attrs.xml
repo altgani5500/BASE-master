@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WeekView">
+        <attr name="firstDayOfWeek" format="enum">
+            <enum name="sunday" value="1" />
+            <enum name="monday" value="2" />
+            <enum name="tuesday" value="3" />
+            <enum name="wednesday" value="4" />
+            <enum name="thursday" value="5" />
+            <enum name="friday" value="6" />
+            <enum name="saturday" value="7" />
+        </attr>
+        <attr name="hourHeight" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="eventTextSize" format="dimension" />
+        <attr name="headerColumnPadding" format="dimension" />
+        <attr name="headerRowPadding" format="dimension" />
+        <attr name="columnGap" format="dimension" />
+        <attr name="headerColumnTextColor" format="color" />
+        <attr name="noOfVisibleDays" format="integer" />
+        <attr name="headerRowBackgroundColor" format="color" />
+        <attr name="dayBackgroundColor" format="color" />
+        <attr name="hourSeparatorColor" format="color" />
+        <attr name="todayBackgroundColor" format="color" />
+        <attr name="todayHeaderTextColor" format="color" />
+        <attr name="hourSeparatorHeight" format="dimension" />
+        <attr name="eventTextColor" format="color" />
+        <attr name="eventPadding" format="dimension" />
+        <attr name="headerColumnBackground" format="color" />
+        <attr name="dayNameLength" format="enum">
+            <enum name="length_short" value="1" />
+            <enum name="length_long" value="2" />
+        </attr>
+        <attr name="overlappingEventGap" format="dimension" />
+        <attr name="eventMarginVertical" format="dimension" />
+        <attr name="xScrollingSpeed" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="WeekHeaderView">
+        <attr name="firstDayOfWeek2" format="enum">
+            <enum name="sunday" value="1" />
+            <enum name="monday" value="2" />
+            <enum name="tuesday" value="3" />
+            <enum name="wednesday" value="4" />
+            <enum name="thursday" value="5" />
+            <enum name="friday" value="6" />
+            <enum name="saturday" value="7" />
+        </attr>
+        <attr name="headerWeekLabelTextSize" format="dimension" />
+        <attr name="headerDayLabelTextSize" format="dimension" />
+        <attr name="headerWeekLabelTextColor" format="color" />
+        <attr name="headerDayLabelNormalTextColor" format="color" />
+        <attr name="headerDayLabelTodayTextColor" format="color" />
+        <attr name="headerBackgroundColor" format="color"/>
+        <attr name="headerColumnGap" format="dimension" />
+        <attr name="headerRowGap" format="dimension" />
+        <attr name="headerPaddingLeft" format="dimension" />
+        <attr name="headerPaddingRight" format="dimension" />
+        <attr name="headerPaddingTop" format="dimension" />
+        <attr name="headerPaddingBottom" format="dimension" />
+        <attr name="headerFocusTextColor" format="color"/>
+        <attr name="headerFocusBackgroundColor" format="color"/>
+        <attr name="headerFocusSameDayBackgroundColor" format="color"/>
+        <attr name="headerFocusSameDayTextColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="CircularEventCellView">
+        <attr name="event_radius" format="dimension" />
+        <attr name="event_circle_padding" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="EventCountCellView">
+        <attr name="event_count_radius" format="dimension" />
+        <attr name="event_background" format="color" />
+        <attr name="event_count_text_color" format="color" />
+        <attr name="event_text_size" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="FlexibleCalendarView">
+        <attr name="startDisplayYear" format="integer" />
+        <attr name="startDisplayMonth" format="integer" />
+        <attr name="weekDayHorizontalSpacing" format="dimension" />
+        <attr name="weekDayVerticalSpacing" format="dimension" />
+        <attr name="monthDayHorizontalSpacing" format="dimension" />
+        <attr name="monthDayVerticalSpacing" format="dimension" />
+        <attr name="weekViewBackground" format="reference" />
+        <attr name="monthViewBackground" format="reference" />
+        <attr name="showDatesOutsideMonth" format="boolean" />
+        <attr name="decorateDatesOutsideMonth" format="boolean" />
+        <attr name="disableAutoDateSelection" format="boolean" />
+        <attr name="startDayOfTheWeek" format="enum">
+            <enum name="SUNDAY" value="1" />
+            <enum name="MONDAY" value="2" />
+            <enum name="TUESDAY" value="3" />
+            <enum name="WEDNESDAY" value="4" />
+            <enum name="THURSDAY" value="5" />
+            <enum name="FRIDAY" value="6" />
+            <enum name="SATURDAY" value="7" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CellState">
+        <attr name="state_date_regular" format="boolean" />
+        <attr name="state_date_today" format="boolean" />
+        <attr name="state_date_selected" format="boolean" />
+        <attr name="state_date_outside_month" format="boolean" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+            android:id="@+id/ll_details_layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical">
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="@dimen/dp_10"
+                   android:padding="@dimen/dp_5"
+                   android:id="@+id/id_back_me"
+                   android:src="@drawable/ic_back_add_jobs"
+
+        />
+        <TextView
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/custom_header_title"
+                android:layout_marginStart="@dimen/dp_10"
+                android:textSize="@dimen/sp_18"
+                android:text="@string/job_preview"
+
+        />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_marginTop="@dimen/dp_8"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_240">
+
+
+                    <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewPager"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"/>
+
+
+                    <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabIndicatorDots"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content"
+                            app:tabBackground="@drawable/tab_selector"
+                            app:tabGravity="center"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMaxWidth="@dimen/dp_12"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textColor="@color/white"
+                              android:layout_alignParentBottom="true"
+                              android:layout_alignParentStart="true"
+                              android:layout_marginStart="@dimen/dp_10"
+                              android:textSize="@dimen/sp_15"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_margin="@dimen/dp_3"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/job_title_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight=".70"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <TextView android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/job_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:id="@+id/prev_jobTitle"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_12"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text=""
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/lledit_details"
+                            android:gravity="end|center|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/edit_new"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|end|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/part_time_type_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight=".80"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:textAlignment="viewStart"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/part_time_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:id="@+id/prev_partTimeType"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_12"
+                                android:textAlignment="viewStart"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text=""
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/location_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight=".80"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:textAlignment="viewStart"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:id="@+id/prev_location"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_12"
+                                android:textAlignment="viewStart"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text=""
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:id="@+id/prev_map"
+                            android:gravity="start|center_vertical|center"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/google_map_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/branch_name_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight=".80"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/branch_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:id="@+id/prev_branch"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_12"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text=""
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+                android:layout_marginEnd="@dimen/dp_3"
+                android:layout_marginStart="@dimen/dp_3"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_margin="@dimen/dp_10"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_bg"
+                        android:text="@string/description"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/prev_description"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_bg"
+                        android:hint="After a user successfully signs in, in the LoginButton's onSuccess callback method, get an access token for the signed-in user, exchange it for a Firebase credential, and authenticate with Firebase using the Firebase credentialAfter a user successfully signs in, in the LoginButton's onSuccess callback method, get an access token for the signed-in user, exchange it for a Firebase credential, and authenticate with Firebase using the Firebase credential"
+                        android:textSize="@dimen/sp_10"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                    android:weightSum="2"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/currency_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/currency"
+                                android:textAlignment="viewStart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:id="@+id/prev_currencys"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_12"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="SAR(Saudi Riyal)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/number_of_applicants_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/number_of_applicants"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:id="@+id/prev_noOfApplicants"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_12"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="500"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--dumy 1-->
+            <LinearLayout
+                    android:weightSum="2"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/hourly_rate_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight=".80"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/hourly_rates"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:id="@+id/hourly_rates"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_12"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="1-5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/working_hours_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight=".80"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/prev_working_hours"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:id="@+id/prev_workingHours"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_8"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="500"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--dummy 2-->
+            <LinearLayout
+                    android:weightSum="2"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/applied_on_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight=".80"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/total_hour_per_week"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:id="@+id/prev_totalHrPerWeek"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_12"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="SAR(Saudi Riyal)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="start|top|center_vertical"
+                            android:layout_width="wrap_content"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:layout_height="match_parent">
+                        <ImageView
+                                android:background="@drawable/work_experiences_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight=".80"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <TextView android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_9"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="@string/work_experience"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:textAlignment="viewStart"
+                                android:id="@+id/prev_workExp"
+                                android:textColor="@color/setting_page_text"
+                                android:textSize="@dimen/sp_12"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="500"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--require ments-->
+            <LinearLayout
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:layout_margin="@dimen/dp_10"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/text_bg"
+                            android:text="@string/prev_requirements"
+                            android:textSize="@dimen/sp_12"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:id="@+id/prev_requirements"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/text_bg"
+                            android:text="After a user successfully signs in, in the LoginButton's onSuccess callback method, get an access token for the signed-in user, exchange it for a Firebase credential, and authenticate with Firebase using the Firebase credentialAfter a user successfully signs in, in the LoginButton's onSuccess callback method, get an access token for the signed-in user, exchange it for a Firebase credential, and authenticate with Firebase using the Firebase credential"
+                            android:textSize="@dimen/sp_10"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Benifiyts-->
+            <LinearLayout
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:layout_margin="@dimen/dp_10"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/text_bg"
+                            android:text="@string/benefits_msg"
+                            android:textSize="@dimen/sp_12"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:id="@+id/prev_benefits"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/text_bg"
+                            android:text="After a user successfully signs in, in the LoginButton's onSuccess callback method, get an access token for the signed-in user, exchange it for a Firebase credential, and authenticate with Firebase using the Firebase credentialAfter a user successfully signs in, in the LoginButton's onSuccess callback method, get an access token for the signed-in user, exchange it for a Firebase credential, and authenticate with Firebase using the Firebase credential"
+                            android:textSize="@dimen/sp_10"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--workguide-->
+            <LinearLayout
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:layout_margin="@dimen/dp_10"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/text_bg"
+                            android:text="@string/work_guidelines"
+                            android:textSize="@dimen/sp_12"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:id="@+id/prev_workguide"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/text_bg"
+                            android:text="After a user successfully signs in, in the LoginButton's onSuccess callback method, get an access token for the signed-in user, exchange it for a Firebase credential, and authenticate with Firebase using the Firebase credentialAfter a user successfully signs in, in the LoginButton's onSuccess callback method, get an access token for the signed-in user, exchange it for a Firebase credential, and authenticate with Firebase using the Firebase credential"
+                            android:textSize="@dimen/sp_10"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

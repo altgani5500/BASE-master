@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/shadow_bg_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_margin="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/txtUserTaskHistoryEnterPriseName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@string/actual_schedule"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_12" />
+
+        <LinearLayout
+                android:padding="@dimen/dp_4"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:gravity="end|center_vertical"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/txtUserTaskHistoryStstusCircle"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp_11" />
+
+            <TextView
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:id="@+id/txtUserTaskHistoryStstus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp_11" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:padding="@dimen/dp_4"
+            android:layout_margin="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@string/task_name"
+                android:textAlignment="viewStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_10" />
+
+        <TextView
+                android:layout_marginTop="@dimen/dp_5"
+                android:id="@+id/txtUserTaskHistoryTaskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:maxLines="1"
+                android:hint="@string/actual_schedule"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_12" />
+
+        <LinearLayout
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/rating_tasktypell"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:text="@string/task_type"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/sp_10" />
+
+                <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:id="@+id/txtUserTaskHistoryTaskType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:hint="@string/continues"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/sp_11" />
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/rating_schedularll"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:text="@string/schedulertask"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/sp_10" />
+
+                <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:id="@+id/txtUserTaskHistorySchedular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:hint="@string/continues"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/sp_11" />
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/rating_layoutll"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:text="@string/rating"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/sp_10" />
+
+                <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:id="@+id/txtUserTaskHistoryRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:hint="@string/continues"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/sp_11" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

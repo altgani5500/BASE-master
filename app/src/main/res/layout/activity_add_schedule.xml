@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:id="@+id/headerLayoutLL"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/shadow_bg_two"
+            android:paddingStart="@dimen/dp_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="start|center_vertical">
+
+            <ImageView
+                    android:id="@+id/addJobBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_back_add_jobs" />
+
+            <TextView
+                    android:id="@+id/jobAddTitle_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/add_schedule"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/custom_header_title"
+                    android:textSize="@dimen/sp_16" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/pp_ll"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_below="@+id/headerLayoutLL"
+            android:layout_above="@+id/bottomLayoutLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/ll_cardaaa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDate0"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_165"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/white"
+                        android:elevation="@dimen/dp_5"
+                        app:cardCornerRadius="@dimen/dp_3">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_5">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                            <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_weight=".70"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/dates"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/text_bg"
+                                    android:textSize="@dimen/sp_12">
+
+                            </TextView>
+
+                            <ImageView
+                                    android:id="@+id/imgAddAnotherDateView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/plus_m" />
+
+                        </LinearLayout>
+
+                        <TextView
+                                android:drawableEnd="@drawable/gray_calendar_m"
+                                android:id="@+id/txtDateCompleted"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@drawable/edittext_bg"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="start|center_vertical"
+                                android:hint="@string/select_date"
+                                android:padding="@dimen/dp_5"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_14" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/start_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/end_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+                            </LinearLayout>
+                            <!--spinner-->
+
+                            <HorizontalScrollView
+                                    android:id="@+id/scrollHorizontalView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="none">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/spn_startHour"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="center"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/spn_startmin"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_7"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/spn_EndHour"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/spn_Endmin"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--time 2-->
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDate1"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_165"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/white"
+                        android:elevation="@dimen/dp_5"
+                        app:cardCornerRadius="@dimen/dp_3">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_5">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                            <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_weight=".70"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/dates"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/setting_page_text"
+                                    android:textSize="@dimen/sp_12">
+
+                            </TextView>
+
+                            <ImageView
+                                    android:id="@+id/imgCardHide1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/minus_m" />
+
+                        </LinearLayout>
+
+                        <TextView
+                                android:id="@+id/txtDateCompleted1"
+                                android:layout_width="match_parent"
+                                android:drawableEnd="@drawable/gray_calendar_m"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@drawable/edittext_bg"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="start|center_vertical"
+                                android:hint="@string/select_date"
+                                android:padding="@dimen/dp_5"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_14" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/start_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/end_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+                            </LinearLayout>
+                            <!--spinner-->
+
+                            <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="none">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startHour1"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="center"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startMin1"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_7"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endHour1"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endMin1"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--time 3-->
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDate2"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_165"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/white"
+                        android:elevation="@dimen/dp_5"
+                        app:cardCornerRadius="@dimen/dp_3">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_5">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                            <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_weight=".70"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/dates"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/setting_page_text"
+                                    android:textSize="@dimen/sp_12">
+
+                            </TextView>
+
+                            <ImageView
+                                    android:id="@+id/imgCardHide2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/minus_m" />
+
+                        </LinearLayout>
+
+                        <TextView
+                                android:drawableEnd="@drawable/gray_calendar_m"
+                                android:id="@+id/txtDateCompleted2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@drawable/edittext_bg"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="start|center_vertical"
+                                android:hint="@string/select_date"
+                                android:padding="@dimen/dp_5"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_14" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/start_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/end_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+                            </LinearLayout>
+                            <!--spinner-->
+
+                            <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="none">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startHour2"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="center"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startMin2"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_7"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endHour2"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endMin2"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--time 4-->
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDate3"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_165"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/white"
+                        android:elevation="@dimen/dp_5"
+                        app:cardCornerRadius="@dimen/dp_3">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_5">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                            <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_weight=".70"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/dates"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/setting_page_text"
+                                    android:textSize="@dimen/sp_12">
+
+                            </TextView>
+
+                            <ImageView
+                                    android:id="@+id/imgCardHide3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/minus_m" />
+
+                        </LinearLayout>
+
+                        <TextView
+                                android:drawableEnd="@drawable/gray_calendar_m"
+                                android:id="@+id/txtDateCompleted3"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@drawable/edittext_bg"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="start|center_vertical"
+                                android:hint="@string/select_date"
+                                android:padding="@dimen/dp_5"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_14" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/start_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/end_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+                            </LinearLayout>
+                            <!--spinner-->
+
+                            <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="none">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startHour3"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="center"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startMin3"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_7"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endHour3"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endMin3"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--time 5-->
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDate4"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_165"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/white"
+                        android:elevation="@dimen/dp_5"
+                        app:cardCornerRadius="@dimen/dp_3">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_5">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                            <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_weight=".70"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/dates"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/setting_page_text"
+                                    android:textSize="@dimen/sp_12">
+
+                            </TextView>
+
+                            <ImageView
+                                    android:id="@+id/imgCardHide4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/minus_m" />
+
+                        </LinearLayout>
+
+                        <TextView
+                                android:drawableEnd="@drawable/gray_calendar_m"
+                                android:id="@+id/txtDateCompleted4"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@drawable/edittext_bg"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="start|center_vertical"
+                                android:hint="@string/select_date"
+                                android:padding="@dimen/dp_5"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_14" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/start_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/end_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+                            </LinearLayout>
+                            <!--spinner-->
+
+                            <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="none">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startHour4"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="center"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startMin4"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_7"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endHour4"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endMin4"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--time 6-->
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDate5"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_165"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/white"
+                        android:elevation="@dimen/dp_5"
+                        app:cardCornerRadius="@dimen/dp_3">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_5">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                            <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_weight=".70"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/dates"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/setting_page_text"
+                                    android:textSize="@dimen/sp_12">
+
+                            </TextView>
+
+                            <ImageView
+                                    android:id="@+id/imgCardHide5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/minus_m" />
+
+                        </LinearLayout>
+
+                        <TextView
+                                android:drawableEnd="@drawable/gray_calendar_m"
+                                android:id="@+id/txtDateCompleted5"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@drawable/edittext_bg"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="start|center_vertical"
+                                android:hint="@string/select_date"
+                                android:padding="@dimen/dp_5"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_14" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/start_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/end_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+                            </LinearLayout>
+                            <!--spinner-->
+
+                            <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="none">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startHour5"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="center"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startMin5"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_7"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endHour5"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endMin5"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--time 7-->
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDate6"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_165"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/white"
+                        android:elevation="@dimen/dp_5"
+                        app:cardCornerRadius="@dimen/dp_3">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_5">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                            <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_weight=".70"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/dates"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/setting_page_text"
+                                    android:textSize="@dimen/sp_12">
+
+                            </TextView>
+
+                            <ImageView
+                                    android:id="@+id/imgCardHide6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/minus_m" />
+
+                        </LinearLayout>
+
+                        <TextView
+                                android:drawableEnd="@drawable/gray_calendar_m"
+                                android:id="@+id/txtDateCompleted6"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:background="@drawable/edittext_bg"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="start|center_vertical"
+                                android:hint="@string/select_date"
+                                android:padding="@dimen/dp_5"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp_14" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/start_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".50"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:text="@string/end_time"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/text_bg"
+                                        android:textSize="@dimen/sp_14" />
+                            </LinearLayout>
+                            <!--spinner-->
+
+                            <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="none">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startHour6"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="center"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/startMin6"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_7"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endHour6"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_hour"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+
+
+                                    </LinearLayout>
+
+
+
+                                    <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:layout_marginStart="@dimen/dp_2"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bg"
+                                            android:gravity="center">
+
+                                        <Spinner
+                                                android:id="@+id/endMin6"
+                                                style="@style/spinner_style2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                                android:entries="@array/time_min"
+                                                android:spinnerMode="dialog"
+                                                android:textAlignment="viewStart"
+                                                android:textSize="@dimen/sp_12">
+
+                                        </Spinner>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!--Continuous-->
+
+            <LinearLayout
+                    android:id="@+id/ll_Check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/white">
+
+                <CheckBox
+                        android:id="@+id/continousCheckBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:button="@drawable/sq_checkbox"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/dp_8"
+                        android:text="@string/continuousa"
+                        android:textColor="@color/text_bg"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+            <!--Enroll view-->
+            <LinearLayout
+                    android:id="@+id/ll_enrollView"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/white">
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/enroll_users"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/sp_13"/>
+
+                <TextView
+                        android:id="@+id/txtSch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_weight=".40"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/save_all"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/sp_12"/>
+                <CheckBox
+                        android:id="@+id/enrollCheckBoxesSaveAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:button="@drawable/sq_checkbox"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/dp_8"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+
+                <View   android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/divider"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"/>
+
+               <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:id="@+id/enrollUserList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+            <Button
+                    android:visibility="gone"
+                    android:id="@+id/submitScheduleBtn22"
+                    android:textColor="@color/app_white"
+                    android:text="@string/submit"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:background="@drawable/btn_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!--Bottom Buttom-->
+
+    <LinearLayout
+            android:id="@+id/bottomLayoutLL"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/submitScheduleBtn"
+                android:textColor="@color/app_white"
+                android:text="@string/submit"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:textSize="@dimen/sp_16"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/btn_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

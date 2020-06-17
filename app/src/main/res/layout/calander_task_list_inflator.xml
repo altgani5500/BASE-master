@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_margin="@dimen/dp_5"
+            android:padding="@dimen/dp_6"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal"
+            android:background="@drawable/task_row_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="start"
+                android:background="@drawable/others"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/imgCalander"
+                />
+
+        <LinearLayout
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_8"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight=".50"
+                android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/taskTextUserName"
+                    android:textSize="@dimen/sp_11"
+                    android:textColor="@color/white"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/skip"
+                    android:textAlignment="viewStart"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/taskTextUserTitle"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/sp_10"
+                    android:textColor="@color/white"
+                    android:text="@string/skip"
+                    android:textAlignment="viewStart"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:background="@drawable/edit_new"
+                android:id="@+id/imgCalanderEdit"
+                />
+
+    </LinearLayout>
+
+</LinearLayout>

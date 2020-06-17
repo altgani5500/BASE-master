@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/ll_Dates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/dates"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_12" />
+
+            <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="start|center_vertical"
+                    android:hint="06/09/2019"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/txtHeaderFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_12" />
+
+            <TextView
+                    android:id="@+id/txtHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@color/divider" />
+
+    <LinearLayout
+            android:id="@+id/ll_punchTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".38"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/actual_schedule"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_10" />
+
+            <TextView
+                    android:id="@+id/txtAddSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="start|center_vertical"
+                    android:hint=""
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".30"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/txtHeader2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/punch_in"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_10" />
+
+            <TextView
+                    android:id="@+id/txtPunchIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".30"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/txtHeader3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/punch_out"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_10" />
+
+            <TextView
+                    android:id="@+id/txtPunchOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_undecudedStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:id="@+id/ll_timeCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/time_calculation"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_12" />
+
+            <TextView
+                    android:id="@+id/txtCancelHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorPrimary2"
+                    android:textColorHint="@color/colorPrimary2"
+                    android:textSize="@dimen/sp_12" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:id="@+id/ll_reason1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/reason"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_13" />
+
+            <TextView
+                    android:id="@+id/txtReasionDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="start|center_vertical"
+                    android:maxLength="1000"
+                    android:maxLines="15"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_11" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:id="@+id/ll_reason2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".70"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/reason"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_13" />
+
+            <ImageView
+                    android:id="@+id/txtReasonImg"
+                    android:layout_width="@dimen/dp_55"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_regectAndAccept"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/imgAccepted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/done_a" />
+
+            <ImageView
+                    android:id="@+id/imgRegected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/cancel_a" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

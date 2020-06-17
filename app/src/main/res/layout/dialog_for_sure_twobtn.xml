@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:background="@android:color/transparent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:orientation="vertical"
+            android:background="@drawable/shadow_bg_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/dialog_txtTitle"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_16"
+                android:text="@string/are_you_sure_you_want_to_delete"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+                android:padding="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_40"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <Button
+                    android:id="@+id/dialog_cancel"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/cancel_s"
+                    android:layout_weight="1"
+                    android:background="@color/bg_screen3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:id="@+id/dialog_yes"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/yes_s"
+                    android:layout_weight="1"
+                    android:background="@color/btn_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

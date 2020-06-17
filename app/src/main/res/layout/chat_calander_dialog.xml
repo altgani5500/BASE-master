@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/shadow_bg_two"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/dates"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_14" />
+
+
+        <TextView
+                android:id="@+id/txtDateCompleted"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start|center_vertical"
+                android:hint="@string/select_date"
+                android:padding="@dimen/dp_5"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/start_time"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/sp_14" />
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/end_time"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+            <!--spinner-->
+
+            <HorizontalScrollView
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:weightSum="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"
+                            android:background="@drawable/edittext_bg">
+
+                        <Spinner
+                                android:id="@+id/spn_startHour"
+                                style="@style/spinner_style2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:entries="@array/time_hour"
+                                android:spinnerMode="dialog"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/sp_12">
+
+                        </Spinner>
+
+
+                    </LinearLayout>
+                    <!--     <LinearLayout
+                                 android:layout_marginStart="@dimen/dp_2"
+                                 android:orientation="vertical"
+                                 android:gravity="center|center_vertical"
+                                 android:layout_weight=".10"
+                                 android:layout_width="0dp"
+                                 android:layout_height="@dimen/dp_45">
+
+                             <TextView
+                                     android:gravity="center|center_vertical"
+                                     android:textColor="@color/text_bg"
+                                     android:text=":"
+                                     android:textSize="@dimen/sp_24"
+                                     android:fontFamily="@font/montserrat_medium"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"/>
+                         </LinearLayout>-->
+                    <LinearLayout
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg">
+
+                        <Spinner
+                                android:id="@+id/spn_startmin"
+                                style="@style/spinner_style2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:entries="@array/time_min"
+                                android:spinnerMode="dialog"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/sp_12">
+
+                        </Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg">
+
+                        <Spinner
+                                android:id="@+id/spn_EndHour"
+                                style="@style/spinner_style2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:entries="@array/time_hour"
+                                android:spinnerMode="dialog"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/sp_12">
+
+                        </Spinner>
+
+
+                    </LinearLayout>
+                    <!--   <LinearLayout
+                               android:layout_marginStart="@dimen/dp_2"
+                               android:orientation="vertical"
+                               android:gravity="center|center_vertical"
+                               android:layout_weight=".10"
+                               android:layout_width="0dp"
+                               android:layout_height="@dimen/dp_45">
+
+                           <TextView
+                                   android:gravity="center|center_vertical"
+                                   android:textColor="@color/text_bg"
+                                   android:text=":"
+                                   android:textSize="@dimen/sp_24"
+                                   android:fontFamily="@font/montserrat_medium"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="match_parent"/>
+                       </LinearLayout>-->
+                    <LinearLayout
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg">
+
+                        <Spinner
+                                android:id="@+id/spn_Endmin"
+                                style="@style/spinner_style2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:entries="@array/time_min"
+                                android:spinnerMode="dialog"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/sp_12">
+
+                        </Spinner>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/type_here"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textSize="@dimen/sp_12" />
+
+            <EditText
+                    android:id="@+id/interview_acceptence_inputs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="start"
+                    android:hint="@string/type_here"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:maxLength="900"
+                    android:maxLines="30"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/text_bg"
+                    android:textColorHint="@color/hint_bg"
+                    android:textSize="@dimen/sp_12" />
+
+
+            <Button
+                    android:id="@+id/interview_acceptence_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@drawable/btn_bg"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/submit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

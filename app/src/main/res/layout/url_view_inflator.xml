@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/dp_35">
+
+    <TextView
+            android:layout_marginTop="@dimen/dp_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/sp_12"
+            android:gravity="start|center_vertical"
+            android:text="@string/start_time"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:id="@+id/webText"
+            android:textColor="@color/text_bg"
+            android:textAlignment="viewStart"
+            android:background="@drawable/edittext_bg"
+            android:singleLine="true"
+            android:drawableEnd="@drawable/view"
+            android:drawablePadding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:ellipsize="marquee"/>
+
+</LinearLayout>

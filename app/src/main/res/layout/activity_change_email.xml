@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:id="@+id/accountSettingbck4"
+                    android:background="@drawable/ic_back_add_jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/change_email_address"
+                    android:layout_weight=".80"
+                    android:id="@+id/filterTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                    android:gravity="end|center_vertical"
+                    android:layout_weight=".20"
+                    android:id="@+id/AddSave_emial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:background="@drawable/ic_done_bluedp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <EditText
+                android:id="@+id/enter_new_email_name"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp_10"
+                android:textAlignment="viewStart"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/text_bg"
+                android:textColorHint="@color/jobs_title2_and_desc"
+                android:drawablePadding="@dimen/dp_10"
+                android:textSize="@dimen/sp_12"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/email_id"
+                android:hint="@string/new_email"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@drawable/edittext_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+        />
+
+    </LinearLayout>
+
+
+</LinearLayout>

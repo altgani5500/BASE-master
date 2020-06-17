@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+            android:background="@drawable/shadow_bg_two"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="start|center_vertical">
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="@dimen/dp_10"
+                       android:padding="@dimen/dp_5"
+                       android:id="@+id/id_back_me_details"
+                       android:src="@drawable/ic_back_add_jobs"
+
+            />
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:gravity="start|center_vertical"
+                    android:layout_weight="1.8"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/custom_header_title"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_18"
+                    android:text="@string/job_detail"
+
+            />
+
+
+            <ImageView
+                    android:textAlignment="viewStart"
+                    android:gravity="start|center_vertical"
+                    android:id="@+id/detail_filter_icon"
+                    android:background="@drawable/filter_six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                style="@style/my_tablayout"
+                app:tabTextAppearance="@style/MyCustomTextAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"
+                app:tabGravity="fill"/>
+
+    </LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+
+</LinearLayout>

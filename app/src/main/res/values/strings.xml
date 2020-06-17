@@ -1,0 +1,723 @@
+<resources>
+    <string name="app_name">Enterprise</string>
+
+
+    <!--M2 Module String-->
+
+    <!--Walkthrough Screen-->
+    <string name="post_jobs_w">Post Jobs</string>
+    <string name="slide_1_desc">you can add part time jobs and receive applicants to work at your enterprise</string>
+    <string name="view_and_select_applicants">VIEW &amp; SELECT APPLICANTS</string>
+    <string name="slide_two_desc">you can view applicants work records including their total hours worked, tasks accomplished and evaluations from previous enterprises prior accepting them. this feature provide the level of adherence to work for each applicants</string>
+    <string name="chat_with_application">CHAT WITH APPLICANTS</string>
+    <string name="slide_three_desc">you can chat with applicants prior accepting them for an interview</string>
+    <string name="add_working_schedule">ADD WORKING SCHEDULE</string>
+    <string name="slide_four_desc">you can add a fixed/flexible working schedule along with the ability to update the schedule weekly. in addition, you can chat with workers included in the schedule to obtain agreement on the work time prior approval</string>
+    <string name="add_and_evaluates_programs">ADD &amp; EVALUATE TASKS</string>
+    <string name="slide_five_desc">you can add continuos and time bounded tasks along with evaluating those tasks upon completion. this feature allow the enterprise to obtain better performance by its workers since it will be stored among their work records</string>
+    <string name="view_worker_profiles">VIEW WORKER PROFILES</string>
+    <string name="slide_six_desc">you can view workers profiles and know their performance at work</string>
+
+    <!--permission-->
+    // permission util class message
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_denied">Storage permission denied. You can enable permission from settings</string>
+    <string name="prmission_alert">App needs this permission to store files on phone\'s storage. Are you sure you want
+        to deny this permission ?
+    </string>
+    <string name="camera_permission">App needs this permission to capture photos using phone\'s camera. Are you sure you
+        want to deny this permission ?
+    </string>
+    <string name="location_permission">App needs this permission to access your location. Are you sure you want to deny
+        this permission ?
+    </string>
+    <string name="grants">Grant</string>
+    <string name="deny">Deny</string>
+
+    <!--Login Screen-->
+    <string name="log_in">LOG IN</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot">FORGOT?</string>
+
+    <!--Home Screen-->
+    <string name="jobs">Jobs</string>
+    <string name="nav_message">Message</string>
+    <string name="nav_jobs">Jobs</string>
+    <string name="nav_workers">Workers</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_setting">Settings</string>
+    <string name="applicatnts_ss">Applicants</string>
+    <string name="description">Description</string>
+    <string name="closed">Closed</string>
+
+
+    <!--Add Jobs-->
+    <string name="add_jobs">Add Jobs</string>
+    <string name="job_title">Job title</string>
+    <string name="part_time_type">Part time type</string>
+    <string name="prev">Preview</string>
+    <string name="submit">Submit</string>
+    <string name="maximum_number_of_applicant_apply">Maximum number of applicants can apply</string>
+    <string name="flexible">Flexible</string>
+    <string name="job_description_required">Job Description Required</string>
+    <string name="same_for_all_days">Same for all days</string>
+    <string name="work_network">Work network</string>
+    <string name="location">Location</string>
+    <string name="branch_name">Branch name</string>
+    <string name="currency">Currency</string>
+    <string name="hourly_rate">Hourly rate</string>
+    <string name="total_hour_per_week">Total hours per week</string>
+    <string name="mins">Min</string>
+    <string name="maxs">Max</string>
+    <string name="requirements">Requirements</string>
+    <string name="benifits">Benefits(Optional)</string>
+    <string name="work_guidelines">Work Guidelines</string>
+    <string name="end_time">End time</string>
+    <string name="start_time">Start time</string>
+    <string name="or">OR</string>
+    <string name="ors">OR</string>
+
+    <!--Edit Jobs-->
+    <string name="edit_jobs_me">Edit Jobs</string>
+    <string name="open_me">Open</string>
+    <string name="keep_future">Close but keep for future</string>
+    <string name="job_preview">Job Preview</string>
+    <string name="job_detail">Job Details</string>
+    <string name="details_s1">Details</string>
+    <string name="no_of_applicnts">Applicants</string>
+
+
+    <!--Job Details-->
+    <string name="your_application_list_is_empty">Your applicants list is empty</string>
+    <string name="accepted_for_interview">Accepted for an interview</string>
+    <string name="accept_for_interview">Accept for an interview</string>
+    <string name="final_acceptance">Final Acceptance</string>
+    <string name="work_experience">Work Experience</string>
+    <string name="nationality">Nationality</string>
+    <string name="education_level">Education level</string>
+    <string name="applied_on">Applied on</string>
+
+    <!--Enterprise Profile-->
+    <string name="enterprise_id">Enterprise id</string>
+    <string name="enterprise_name">Enterprise name</string>
+    <string name="enterprise_category_industry">Enterprise category/industry</string>
+    <string name="general_info">General info</string>
+
+    <!--Edit Enterprise Profile-->
+    <string name="upload_logo">Upload Logo</string>
+    <string name="save">Save</string>
+
+    <!--Setting-->
+    <string name="sub_users">Sub Users</string>
+    <string name="account_settings">Account settings</string>
+    <string name="logout_me">Logout</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="advanced_settings">Advanced Settings</string>
+
+    <!--App Side Validation messages-->
+    <string name="enter_user_name">Please Enter user name</string>
+    <string name="no_more_days_added">No more days are added.</string>
+    <string name="please_add_images">Please add images.</string>
+    <string name="please_enter_parttime_type">Please enter part time type.</string>
+    <string name="please_enter_job_desc">Please enter job description.</string>
+    <string name="please_enter_job_location">Please enter job location.</string>
+    <string name="please_enter_branch">Please enter branch.</string>
+    <string name="please_enter_currency">Please enter currency.</string>
+    <string name="please_enter_hourly_rates">Please enter Hourly Rate.</string>
+    <string name="please_enter_total_hour_per_work"> Please enter total hour per week.</string>
+    <string name="please_enter_maximum_number_of_applicant">Please enter maximum no of applicant.</string>
+    <string name="please_enter_hours_of_experience">Please enter hours of experience.</string>
+    <string name="please_enter_user_name">Please enter user name.</string>
+    <string name="please_enter_job_requirements">Please enter job requirements.</string>
+    <string name="please_enter_work_guidelines">Please enter work guideline.</string>
+    <string name="please_enter_enterpriseName"> Please enter EnterpriseName.</string>
+    <string name="please_select_categories">Please select category.</string>
+    <string name="please_enter_generalinfo">Please enter general info.</string>
+    <string name="please_enter_emailid">Please enter Email ID.</string>
+    <string name="please_pass_not_match"> Password does not match</string>
+    <string name="please_enter_conf_pass">Please enter Confirm Password</string>
+    <string name="password_must_not_be_empty">Password must be not empty</string>
+    <string name="please_enter_password">Please enter Password</string>
+    <string name="error_generic">Something went wrong.</string>
+    <string name="empty_car_images">Please select at least one image.</string>
+    <string name="mimum_images_require">Please add atleast one work picture</string>
+    <string name="enter_Job_Title">Please enter job title.</string>
+    <string name="branch_name_required">Please enter branch name </string>
+    <string name="select_currency">Please choose currency</string>
+    <string name="hourly_rate_select">Select Hourly Rate</string>
+    <string name="please_select_parttimetype">Please Select PartTime Type</string>
+    <string name="please_select_currency">Please Select Currency</string>
+    <string name="please_select_hourly_rate">Please Select Hourly Rate</string>
+    <string name="select_hour_of_week">No more days are added.</string>
+    <string name="edt_hourly_rate">Enter Hourly Rate</string>
+    <string name="hourly_rayte_week_select">Select Hourly week</string>
+    <string name="maximul_applicants">Please Enter Maximum Applicants</string>
+    <string name="seek_bar_err">Select Your Of Exp. Through Range</string>
+    <string name="err_requirements">Please enter Job Requirements</string>
+    <string name="err_work_guidelines">Please enter work Guidelines</string>
+    <string name="prev_requirements">Requirements</string>
+    <string name="job_location_required">Valid Job Location Required</string>
+    <string name="benefits_msg">Benefits</string>
+    <string name="prev_working_hours">Working hours</string>
+    <string name="are_you_sure_you_want_to_delete">Are you sure you want to delete the Job ? </string>
+    <string name="wify_user_name">Please enter work network username</string>
+    <string name="logout_message">Are you sure, you want to logout?</string>
+    <string-array name="day">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+    <string name="email_id_validation">Please enter your email ID</string>
+    <string name="passaword_validation_login">Please enter your password</string>
+    <string name="your_joblist_is_empty">You have not added any jobs yet</string>
+
+    <!--Add Edit Jobs/Validation Page-->
+    <string name="err_picture">Please add atleast one work picture</string>
+    <string name="err_Jobtitle">Please enter Job title</string>
+    <string name="err_partitime_type">Please choose Part time type</string>
+    <string name="err_jobdesc">Please enter Job description</string>
+    <string name="err_jobLoc"> Please enter Job location</string>
+    <string name="err_jobcurrency">Please choose currency</string>
+    <string name="err_range_hour">Please choose hour range</string>
+    <string name="err_enter_hourly_rate">Please enter hourly rate</string>
+    <string name="err_total_workinghours">Please choose total hours per week</string>
+    <string name="err_no_ofapplicant">Please enter maximum number of applicants</string>
+    <string name="err_specyfyhours">Please specify Working hours</string>
+    <string name="err_valid_startendtime">Please enter the valid start time and end time</string>
+    <string name="err_workinghours_off_all_days"> Please enter working hours for all days</string>
+    <string name="err_wifyUserName">Please enter work network username</string>
+    <string name="err_wifyUserpass">Please enter work network password</string>
+    <string name="err_job_requirement">Please enter Job Requirements</string>
+    <string name="err_guidelines">Please enter work Guidelines</string>
+
+    //KtAlert Class
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+    <string name="title_activity_login">LoginActivity</string>
+
+    // intro slider content
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">NEXT</string>
+
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear
+        data
+    </string>
+    <string name="play_again">Play Again</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+
+    <string name="search">Search</string>
+    <string name="notification">Notification</string>
+
+
+    <string name="post_jobs">Post Jobs</string>
+    <string name="network_message">Make sure you have an active data connection</string>
+
+    <string name="network_error">Not connected to Internet</string>
+    <string name="password_not_match">Password does not match</string>
+    <string name="empty_confirm_pass">Please enter Confirm Password.</string>
+    <string name="error_invalid_password">Password must be not empty.</string>
+    <string name="empty_password">Please enter your password</string>
+    <string name="empty_dob">Please enter Date of Birth.</string>
+    <string name="error_invalid_phone">Please enter a valid Phone number.</string>
+    <string name="empty_phone">Please enter Phone number.</string>
+    <string name="error_invalid_email">Please enter your email ID</string>
+    <string name="empty_email">Please enter email.</string>
+    <string name="empty_fullname">Please enter full name.</string>
+    <string name="lastName">Please Enter Last Name</string>
+    <string name="please_resend_otp">Please resend OTP</string>
+    <string name="please_enter_otp">Please enter valid otp.</string>
+
+    <string name="err_terms_conditions">Please accept terms &amp; conditions</string>
+    <string name="empty_country">Please select country.</string>
+    <string name="empty_phone_or_email">Please enter either email or Phone Number.</string>
+    <string name="empty_old_pass">Please enter Old Password.</string>
+    <string name="empty_brand">Please select brand.</string>
+    <string name="empty_model_name">Please enter model name.</string>
+    <string name="empty_model_year">Please enter model year.</string>
+    <string name="empty_odometer">Please enter odometer value.</string>
+    <string name="empty_engine_size">Please enter engine size.</string>
+    <string name="empty_expected_price">Please enter expected price.</string>
+    <string name="empty_info">Please enter additional info.</string>
+    <string name="hours_of_experiences">Hours of experiences</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sucess_login">Successfully Login</string>
+    <string name="forgotType_msg">Select Forgot Type First</string>
+    <string name="settings">Settings</string>
+    <string name="forgot_page">FORGOT</string>
+    <string name="username_or_password">Username or Password?</string>
+    <string name="enter_your_registered_email_id">Enter your Registered \nEmail Id</string>
+    <string name="email_id">Email Id</string>
+    <string name="jobs_descriptions">Jobs descriptions</string>
+    <string name="working_hours">Working hours</string>
+    <string name="work_guideline">Work guideline</string>
+    <string name="profile">Profile</string>
+    <string name="edit">Edit</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="number_of_applicants">Number of applicants</string>
+    <string name="hourly_rates">Hourly rate</string>
+    <string name="device_token_msg">Device Token Is Empty</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="cancel_s">CANCEL</string>
+    <string name="delete_s">Delete</string>
+    <string name="yes_s">YES</string>
+
+
+    <string name="account_setting">Account Setting</string>
+    <string name="notifications">Notifications</string>
+    <string name="advance_settings">Advance Settings</string>
+
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="arabic">Arabic</string>
+    <string name="select_language">Select Language</string>
+    <string name="apply">Apply</string>
+    <string name="enterprise_name_s">Enterprise Name</string>
+    <string name="enter_name_please">Enter Name First</string>
+    <string name="profile_info">Enter Your Profile Information</string>
+
+    <string name="cv_certificate">CV/Certificate</string>
+    <string name="all_task">All Tasks</string>
+    <string name="complete">Complete</string>
+    <string name="pendings">Pending</string>
+    <string name="in_process">In Process</string>
+    <string name="total_no_of_hours">Total no. of Hours</string>
+    <string name="change_language">Change Language</string>
+    <string name="done">Done</string>
+    <string name="totla_workinghours">Total Working History</string>
+
+    <string name="chooselanguage">Choose Language</string>
+
+
+    <string name="hours">hours</string>
+
+
+    <string name="your_worklist_is_empty">Your Enrolled workers list is empty</string>
+    <string name="your_subuser_is_empty">Your Sub user list is empty</string>
+
+
+    <!--Dummy Spinner Value-->
+    <string-array name="select">
+        <item>Select</item>
+    </string-array>
+
+    <!--Dummy Spinner Value-->
+    <string-array name="calanderview">
+        <item>Week</item>
+        <item>Day</item>
+    </string-array>
+
+
+    <string-array name="week_hour_rate">
+        <item>1-5</item>
+        <item>5-10</item>
+        <item>11-15</item>
+        <item>16-20</item>
+        <item>21+</item>
+        <item>None Of These</item>
+    </string-array>
+
+    <string name="places_key">AIzaSyC-kBLYO2qpSUj7AloQQ9Z9r4dETFZeDZ4</string>
+
+
+    <string name="select_start_time">Select start time</string>
+    <string name="select_date_time_same">Start and end time is not be Same</string>
+    <string name="file_format">This file format not supported!</string>
+
+    <string-array name="hours_perweek">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+
+    <!--Working hour history-->
+    <string-array name="working_hour_history">
+        <item>Any</item>
+        <item>48+</item>
+        <item>96+</item>
+        <item>288+</item>
+        <item>576+</item>
+        <item>1152+</item>
+    </string-array>
+    <!--Gender Array-->
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Any</item>
+    </string-array>
+
+    <!--Age Array-->
+    <string-array name="age_array">
+        <item>Any of the following option</item>
+        <item>16-19</item>
+        <item>20-25</item>
+        <item>26-35</item>
+        <item>40-60</item>
+    </string-array>
+
+    <string-array name="location_by_radious">
+        <item>With in 5 KM</item>
+        <item>Up to 10 KM</item>
+        <item>11-15 KM</item>
+        <item>20 KM +</item>
+    </string-array>
+
+    <string-array name="time_hour">
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+    </string-array>
+
+    <string-array name="time_min">
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+    </string-array>
+
+
+    <string-array name="location_by_radious_selection">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+
+    <!--Age Array-->
+    <string-array name="task">
+        <item>Maximum to Minimum</item>
+        <item>Any</item>
+    </string-array>
+
+    <!--Age Array-->
+    <string-array name="evolution">
+        <item>Excellent</item>
+        <item>very good</item>
+        <item>Good</item>
+        <item>Poor</item>
+    </string-array>
+    <string name="hourly_ratess">Hourly Rates</string>
+    <string name="only_to_team_member">Only to team member</string>
+    <string name="donot_show">Don"'"t Show</string>
+    <string name="show">Show</string>
+    <string name="enrolled_workers">Enrolled Workers</string>
+    <string name="add_sub_user">Add Sub User</string>
+
+    <string name="reset">Reset</string>
+    <string name="autodetect">Autodetect Location</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="filter">Filter</string>
+    <string name="industry">Industry</string>
+    <string name="work_history">Work Hour History</string>
+    <string name="gender">Gender</string>
+    <string name="age">Age</string>
+    <string name="education_levels">Education Level</string>
+    <string name="loc_by_radious">Location by Radius</string>
+    <string name="task">Task</string>
+    <string name="evaluation">Evaluation</string>
+    <string name="apply_filter">Apply Filter</string>
+    <string name="edit_first_name">Edit first name</string>
+    <string name="edit_last_name">Edit enterprise name</string>
+    <string name="change_password">Change password</string>
+    <string name="change_email_address">Change email address</string>
+    <string name="enter_new_first_name">Enter new first name</string>
+    <string name="enter_new_last_name">Enter new last name</string>
+    <string name="conf_pass">Enter confirm password</string>
+    <string name="new_pass">Enter new password</string>
+    <string name="enter_old_pass">Enter old password</string>
+    <string name="new_email">Enter new email id</string>
+    <string name="enroll_workers">Enrolled Workers</string>
+    <string name="type_here">Type here...</string>
+    <string name="thousand">1000</string>
+    <string name="congrts">Congratulations</string>
+    <string name="send">Send</string>
+    <string name="max_thousand">Max 1000</string>
+    <string name="message_required">Acceptance message required</string>
+    <string name="education_details">Education Detail</string>
+
+
+    <!--Location Dummy message-->
+    <string name="action_geolocate">Pick Place</string>
+    <string name="default_info_title">Default Location</string>
+    <string name="default_info_snippet">No places found, because location permission is disabled.</string>
+    <string name="address_found">Address found</string>
+    <string name="invalid_lat_long_used">Invalid latitude or longitude used</string>
+    <string name="no_address_found">Sorry, no address found</string>
+    <string name="no_geocoder_available">No geocoder available</string>
+    <string name="no_location_data_provided">No location data provided</string>
+    <string name="service_not_available">Sorry, the service is not available</string>
+
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.
+    </string>
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+
+
+    <!--M3 module-->
+    <string name="name">Name</string>
+    <string name="enter_user">Enter Name</string>
+    <string name="user_name">User name</string>
+
+    <string name="roles">Roles</string>
+    <string name="scheduler">Admin</string>
+    <string name="supervisor">Scheduler/Supervisor</string>
+    <string name="super_evaluator">Super Evaluator</string>
+    <string name="recruiter">Recruiter</string>permission_rationale
+    <string name="notification_settings">Notification Settings</string>
+    <string name="message">Message</string>
+    <string name="password_err_new">Password should contain at least 1 special character, 1 numeric value, 1 capital
+        letter and minimum length should be 6
+    </string>
+    <string name="title_activity_enroll_worker_profile">EnrollWorkerProfileActivity</string>
+    <string name="no_work_history">No History Found for this worker</string>
+    <string name="no_msg_history">No Message history found </string>
+    <string name="no_search_result">Search for candidates</string>
+    <string name="wokiking_history_hours">Working hour history</string>
+    <string name="filter_message">You have not to select any filter content</string>
+    <string name="search_err_message">For better search result required minimum 3 character </string>
+    <string name="select_date">Select Date</string>
+    <string name="dates">Date</string>
+    <string name="evolutions">Evaluation</string>
+    <string name="select_end_time">Select start time</string>
+    <string name="select_either_flex_or_same">Select either flexible or same for all days option</string>
+    <string name="type_message">Please input message here</string>
+    <string name="notificationMsgs">There is no notification list.</string>
+    <string name="all_ready_added_congrts">Already added</string>
+    <string name="add_sub">Sub User</string>
+    <string name="edit_sub_user">Edit Sub User</string>
+
+
+    <!--M4 module-->
+    <string name="calander">Calender</string>
+    <string name="chat_cal_send_msg">Meeting schedule date and time :</string>
+    <string name="role_msg">You are not authorized to use this feature</string>
+    <string name="to">Enter minimum hour</string>
+    <string name="froms">Enter maximum hour</string>
+    <string name="tos">Min hour should be greater than 0</string>
+    <string name="fromss">Max hours cannot be less than min hours</string>
+    <string name="applicant_del_msg">"Are you sure you want to delete this applicant"</string>
+    <string name="start_time_end_time_validation">End hour should  be greater than start hour</string>
+    <string name="gps_on">Please turn on gps for better Result</string>
+    <string name="network_username">Network username</string>
+    <string name="network_password">Network Password</string>
+    <string name="total_hours_worked_per_week">Total hours worked per week</string>
+    <string name="schedule_log_times"><![CDATA[Schedule & log times]]></string>
+    <string name="more">More</string>
+    <string name="schedule_time">Schedule time</string>
+    <string name="log_time">Log time</string>
+    <string name="over_time">Over time</string>
+    <string name="task_name">Task Name:</string>
+    <string name="task_type">Task Type</string>
+    <string name="continues">Continues</string>
+    <string name="completed">Completed</string>
+    <string name="pending">Pending</string>
+    <string name="create_task">Create Task</string>
+    <string name="choose_task_type">Choose task type</string>
+    <string name="task_description">Task Description</string>
+    <string name="choose_super_evaluator">Choose Super Evaluator</string>
+    <string name="see_all">See all</string>
+    <string name="execution_date_time"><![CDATA[Execution Date & Time]]></string>
+    <string name="continuous">Continuous</string>
+    <string name="timebound">Time bound</string>
+    <string name="please_select_super_evaluator">Please select super evaluator</string>
+    <string name="please_select_task_date">Please select task date</string>
+    <string name="task_description_err">Please select task description</string>
+    <string name="err_task_name">Please enter task name</string>
+    <string name="reevaluates">Re-Evaluation</string>
+    <string name="schedulertask">Scheduler</string>
+    <string name="rating">Rating</string>
+    <string name="what_s_your_rate">What\'s Your Rate</string>
+    <string name="reason">Reason</string>
+    <string name="thanks">THANKS</string>
+    <string name="for_your_feedback">For Your Feedback</string>
+    <string name="err_resion">Please enter reason</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="add_schedule">Add Schedule</string>
+    <string name="continuousa">Continuous</string>
+    <string name="enroll_users">Enrolled users</string>
+    <string name="group_chat">Group Chat</string>
+    <string name="space_start_time">   Start Time </string>
+    <string name="space_end_time">  To  </string>
+    <string name="pms">PM</string>
+    <string name="ams">AM</string>
+    <string name="save_all">Select all</string>
+    <string name="err_schedule_enter_one">Please Enter Schedule Date</string>
+    <string name="err_schedue_date_one">Please Enter Schedule Date</string>
+    <string name="err_schedule_start_time">Please Select Schedule Start Time</string>
+    <string name="err_schedule_end_time">Please Select Schedule End Time</string>
+    <string name="err_enroll_user_list">Please Select Enroll User</string>
+    <string name="event_on">Event On:</string>
+    <string name="bys">By:</string>
+    <string name="event">Event</string>
+    <string name="event_details">Event Details !</string>
+    <string name="total_hours_worked">Total hours worked</string>
+    <string name="weekly_hours">Weekly hours</string>
+    <string name="punch_out">Punch out</string>
+    <string name="punch_in">Punch in</string>
+    <string name="actual_schedule">Actual Schedule</string>
+    <string name="time_calculation">Time calculation</string>
+    <string name="undecided">undecided</string>
+    <string name="hrss">hrs</string>
+    <string name="hrs_out_of">HRS OUT OF</string>
+    <string name="hrsaa">HRS</string>
+    <string name="on_time_status">On Time</string>
+    <string name="early_hour_status">Early Hour</string>
+    <string name="over_time_status">Over Time</string>
+    <string name="undecided_status">Undecided</string>
+    <string name="rejected_status">Rejected</string>
+    <string name="hrsss">hr</string>
+    <string name="err_account_type">You can not access this feature. Please upgrade your account.</string>
+    <string name="err_enroll_empty">There are no enroll user for schedule!</string>
+    <string name="times_logs">Times Logs</string>
+    <string name="close">Close</string>
+    <string name="toss">To</string>
+    <string name="times">Time:</string>
+
+    <string-array name="select_task_Type">
+        <item>Continuous</item>
+        <item>Time bound</item>
+    </string-array>
+
+    <string-array name="select_rates">
+        <item>Excellent</item>
+        <item>Very Good</item>
+        <item>Good</item>
+        <item>Poor</item>
+    </string-array>
+
+    <string-array name="years">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="rescheduled_status">Rescheduled</string>
+    <string name="revaluation_status">Revaluation</string>
+
+    <string name="pending_evaluation">Pending Evaluation</string>
+    <string name="there_are_empty_task">There are no schedule task</string>
+    <string name="edit_schedule">Edit Schedule</string>
+
+    <!--test Purpose-->
+
+</resources>

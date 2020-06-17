@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/setting_page_color"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:id="@+id/addJobBack"
+                    android:background="@drawable/ic_back_add_jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/add_jobs"
+                    android:id="@+id/jobAddTitle_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:background="@color/white"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="1.999"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:scrollbars="none"
+                            android:id="@+id/recycle_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/imgAddJoblayout"
+                        android:layout_margin="@dimen/dp_2"
+                        android:gravity="center"
+                        android:background="@color/ui_default_bg"
+                        android:layout_width="0dp"
+                        android:layout_weight=".50"
+                        android:layout_height="@dimen/dp_130">
+
+                    <ImageView
+                            android:background="@drawable/add_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+                <RadioGroup
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <RadioButton
+                            android:id="@+id/rdbOpen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/open_me"
+                            android:checked="true"
+                            android:paddingStart="@dimen/dp_10"
+                            android:paddingVertical="@dimen/dp_10"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"
+                    />
+
+                    <RadioButton
+                            android:id="@+id/rdbkepp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_15"
+                            android:textSize="@dimen/sp_14"
+                            android:paddingStart="@dimen/dp_15"
+                            android:paddingVertical="@dimen/dp_10"
+                            android:text="@string/keep_future"
+                            android:textColor="@color/black"
+                    />
+
+
+                </RadioGroup>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/job_title"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/edtJobTitleAddJob"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="@dimen/dp_10"
+                        android:paddingEnd="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="@string/job_title"
+                        android:textSize="@dimen/sp_12"
+                        android:maxLength="30"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:textColorHint="@color/hint_bg"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/part_time_type"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/edittext_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+
+                    <Spinner
+                            style="@style/spinner_style"
+                            android:entries="@array/select"
+                            android:id="@+id/spnPartTime"
+                            android:textSize="@dimen/sp_12"
+                            android:spinnerMode="dialog"
+                            android:backgroundTint="@color/text_bg"
+                            android:textAlignment="viewStart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/jobs_descriptions"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edtJobDescAddjobs"
+                        android:paddingTop="@dimen/dp_5"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="@string/jobs_descriptions"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:textColorHint="@color/hint_bg"
+                        android:maxLength="230"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:textSize="@dimen/sp_12"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_140"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/location"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edtLocationAddjobs"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="@dimen/dp_10"
+                        android:gravity="start|center_vertical"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="@string/location"
+                        android:textSize="@dimen/sp_12"
+                        android:textColorHint="@color/hint_bg"
+                        android:maxLength="40"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/branch_name"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/edtBranchNameAddJobs"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="@string/branch_name"
+                        android:imeOptions="actionNext"
+                        android:textSize="@dimen/sp_12"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColorHint="@color/hint_bg"
+                        android:maxLength="30"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/currency"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/edittext_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+
+                    <Spinner
+                            style="@style/spinner_style"
+                            android:id="@+id/spnCurrancy"
+                            android:textSize="@dimen/sp_12"
+                            android:entries="@array/select"
+                            android:spinnerMode="dialog"
+                            android:backgroundTint="@color/jobs_title2_and_desc"
+                            android:textAlignment="viewStart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/hourly_rate"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                        android:weightSum="2"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+                    <LinearLayout
+                            android:background="@drawable/edittext_bg"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45">
+                        <Spinner
+                                style="@style/spinner_style"
+                                android:id="@+id/spnHourlyRateAddJobs"
+                                android:textSize="@dimen/sp_12"
+                                android:layout_weight="1"
+                                android:entries="@array/week_hour_rate"
+                                android:spinnerMode="dialog"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:textAlignment="viewStart"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_45">
+
+                        </Spinner>
+                    </LinearLayout>
+
+
+                    <EditText
+                            android:visibility="gone"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:id="@+id/edtHourlyRateAddjobs"
+                            android:layout_weight="1"
+                            android:textAlignment="viewStart"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/hourly_rate"
+                            android:textSize="@dimen/sp_12"
+                            android:maxLength="10"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/total_hour_per_week"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/edittext_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+
+                    <Spinner
+                            style="@style/spinner_style"
+                            android:id="@+id/spnTotalHourWeekAddJobs"
+                            android:textSize="@dimen/sp_12"
+                            android:entries="@array/hours_perweek"
+                            android:spinnerMode="dialog"
+                            android:backgroundTint="@color/jobs_title2_and_desc"
+                            android:textAlignment="viewStart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/maximum_number_of_applicant_apply"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edtMaximumApplicantAddjobs"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="500"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp_12"
+                        android:textColorHint="@color/hint_bg"
+                        android:maxLength="10"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/working_hours"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <CheckBox
+                        android:id="@+id/chkFlexible"
+                        android:textAlignment="viewStart"
+                        android:text="@string/flexible"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/jobs_header_title"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/ors"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <!--Day start time one-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/llLinearAddTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+            </LinearLayout>
+            <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/llday1"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:weightSum="3"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+                    <LinearLayout
+                            android:background="@drawable/edittext_bg"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45">
+                        <Spinner
+                                style="@style/spinner_style"
+                                android:id="@+id/spnDayOne"
+                                android:textSize="@dimen/sp_12"
+                                android:layout_weight="1"
+                                android:entries="@array/day"
+                                android:spinnerMode="dialog"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:textAlignment="viewStart"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_45">
+
+                        </Spinner>
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/txtStartTimeOne"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/start_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                    <TextView
+                            android:id="@+id/txtEndTimeOne"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/end_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--day two-->
+            <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llday2"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:weightSum="3"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+                    <LinearLayout
+                            android:background="@drawable/edittext_bg"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45">
+                        <Spinner
+                                style="@style/spinner_style"
+                                android:id="@+id/spnDayTwo"
+                                android:textSize="@dimen/sp_12"
+                                android:layout_weight="1"
+                                android:entries="@array/day"
+                                android:spinnerMode="dialog"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:textAlignment="viewStart"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_45">
+
+                        </Spinner>
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/txtStartTimeTwo"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/start_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                    <TextView
+                            android:id="@+id/txtEndTimeTwo"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/end_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--day three-->
+            <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llday3"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:weightSum="3"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+                    <LinearLayout
+                            android:background="@drawable/edittext_bg"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45">
+                        <Spinner  style="@style/spinner_style"
+                                android:id="@+id/spnDayThree"
+                                android:textSize="@dimen/sp_12"
+                                android:layout_weight="1"
+                                android:entries="@array/day"
+                                android:spinnerMode="dialog"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:textAlignment="viewStart"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_45">
+
+                        </Spinner>
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/txtStartTimeThree"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/start_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                    <TextView
+                            android:id="@+id/txtEndTimeThree"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/end_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--day four-->
+            <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llday4"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:weightSum="3"
+                        android:layout_marginTop="@dimen/dp_5"
+
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+                    <LinearLayout
+                            android:background="@drawable/edittext_bg"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45">
+                        <Spinner
+                                style="@style/spinner_style"
+                                android:id="@+id/spnDayFour"
+                                android:textSize="@dimen/sp_12"
+                                android:layout_weight="1"
+                                android:entries="@array/day"
+                                android:spinnerMode="dialog"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:textAlignment="viewStart"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_45">
+
+                        </Spinner>
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/txtStartTimeFour"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/start_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                    <TextView
+                            android:id="@+id/txtEndTimeFour"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/end_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--day five-->
+            <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llday5"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:weightSum="3"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+                    <LinearLayout
+                            android:background="@drawable/edittext_bg"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45">
+                        <Spinner  style="@style/spinner_style"
+                                android:id="@+id/spnDayFive"
+                                android:textSize="@dimen/sp_12"
+                                android:layout_weight="1"
+                                android:entries="@array/day"
+                                android:spinnerMode="dialog"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:textAlignment="viewStart"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_45">
+
+                        </Spinner>
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/txtStartTimeFive"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/start_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                    <TextView
+                            android:id="@+id/txtEndTimeFive"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/end_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--day six-->
+            <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llday6"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:weightSum="3"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+                    <LinearLayout
+                            android:background="@drawable/edittext_bg"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45">
+                        <Spinner
+                                style="@style/spinner_style"
+                                android:id="@+id/spnDaySix"
+                                android:textSize="@dimen/sp_12"
+                                android:layout_weight="1"
+                                android:entries="@array/day"
+                                android:spinnerMode="dialog"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:textAlignment="viewStart"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_45">
+
+                        </Spinner>
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/txtStartTimeSix"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/start_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                    <TextView
+                            android:id="@+id/txtEndTimeSix"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/end_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--day seven-->
+            <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llday7"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:weightSum="3"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+                    <LinearLayout
+                            android:background="@drawable/edittext_bg"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45">
+                        <Spinner
+                                style="@style/spinner_style"
+                                android:id="@+id/spnDaySeven"
+                                android:textSize="@dimen/sp_12"
+                                android:layout_weight="1"
+                                android:entries="@array/day"
+                                android:spinnerMode="dialog"
+                                android:backgroundTint="@color/jobs_title2_and_desc"
+                                android:textAlignment="viewStart"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_45">
+
+                        </Spinner>
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/txtStartTimeSeven"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/start_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                    <TextView
+                            android:id="@+id/txtEndTimeSeven"
+                            android:layout_weight="1"
+                            android:gravity="center|center_vertical"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/end_time"
+                            android:textSize="@dimen/sp_12"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--for all day checked-->
+            <LinearLayout
+                    android:visibility="visible"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:weightSum="2"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55">
+                    <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_35">
+                        <CheckBox
+                                android:id="@+id/chkSameForAllDays"
+                                android:textAlignment="viewStart"
+                                android:text="@string/same_for_all_days"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/jobs_header_title"
+                                android:textSize="@dimen/sp_12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                            android:gravity="end|center_vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_35">
+
+                        <ImageView
+                                android:id="@+id/addMoreWorkingHour"
+                                android:background="@drawable/add_date"
+                                android:layout_width="@dimen/dp_20"
+                                android:layout_height="@dimen/dp_20"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Seek bar view-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/hours_of_experiences"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:gravity="start|center_vertical"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp_9"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/mins"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp_9"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/maxs"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:gravity="start|center_vertical"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                   <!-- <com.mohammedalaa.seekbar.RangeSeekBarView
+                            android:id="@+id/rangeSeekbarAddjobs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:barHeight="@dimen/dp_5"
+                            android:textAlignment="viewStart"
+                            app:baseColor="@color/hint_bg"
+                            app:circleRadius="@dimen/value_bar_circleRadius"
+                            android:mirrorForRtl="true"
+                            app:circleTextColor="@color/white"
+                            app:circleTextSize="@dimen/sp_10"
+                            app:fillColor="@color/jobs_header_title"
+                            app:currentValue="10"
+                            app:minValue="0"
+                            app:maxValue="1152"
+                            app:stepValue="1"
+                    />-->
+
+                    <EditText
+                            android:visibility="visible"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:id="@+id/hourlyRangeTo"
+                            android:layout_weight="1"
+                            android:textAlignment="viewStart"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/to"
+                            android:textSize="@dimen/sp_10"
+                            android:maxLength="3"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                    <EditText
+                            android:visibility="visible"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:id="@+id/hourlyRangeFrom"
+                            android:layout_weight="1"
+                            android:textAlignment="viewStart"
+                            android:paddingStart="@dimen/dp_5"
+                            android:textColor="@color/text_bg"
+                            android:hint="@string/froms"
+                            android:textSize="@dimen/sp_10"
+                            android:maxLength="4"
+                            android:textColorHint="@color/hint_bg"
+                            android:layout_marginStart="@dimen/dp_2"
+                            android:background="@drawable/edittext_bg"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_45"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:gravity="start|center_vertical"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp_9"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="0"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_weight="1"
+                            android:textSize="@dimen/sp_9"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="1152+"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--work network view-->
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/work_network"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/network_username"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edtwifyUserNameAddjobs"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="@string/network_username"
+                        android:inputType="text"
+                        android:textSize="@dimen/sp_12"
+                        android:textColorHint="@color/hint_bg"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"/>
+
+
+                <TextView
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/network_password"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edtWifyPasswordAddjobs"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="@string/network_password"
+                        android:inputType="textPassword"
+                        android:textSize="@dimen/sp_12"
+                        android:textColorHint="@color/hint_bg"
+                        android:maxLength="70"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:maxLines="1"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"/>
+
+            </LinearLayout>
+
+            <!--requirement view-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/requirements"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edtRequirementsAddJobs"
+                        android:paddingTop="@dimen/dp_5"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="@string/requirements"
+                        android:inputType="textMultiLine"
+                        android:textColorHint="@color/hint_bg"
+                        android:maxLength="330"
+                        android:maxLines="12"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:textSize="@dimen/sp_12"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_140"/>
+
+
+            </LinearLayout>
+
+            <!--benifits view-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/benifits"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edtbenifitsAddJobs"
+                        android:paddingTop="@dimen/dp_5"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="@string/benifits"
+                        android:inputType="textMultiLine"
+                        android:textColorHint="@color/hint_bg"
+                        android:maxLength="330"
+                        android:maxLines="12"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:textSize="@dimen/sp_12"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_140"/>
+
+
+            </LinearLayout>
+
+            <!--work-guidance-->
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="@dimen/sp_9"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:text="@string/work_guideline"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:imeOptions="actionDone"
+                        android:id="@+id/edtWorkGuideLineAddJobs"
+                        android:paddingTop="@dimen/dp_5"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="@color/text_bg"
+                        android:hint="@string/work_guideline"
+                        android:inputType="textMultiLine"
+                        android:textColorHint="@color/hint_bg"
+                        android:maxLength="330"
+                        android:maxLines="12"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:textSize="@dimen/sp_12"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_140"/>
+
+
+            </LinearLayout>
+
+            <!--btn view-->
+            <LinearLayout
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:id="@+id/btnPrevJobs"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="@dimen/dp_3"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="@string/prev"
+                        android:textSize="@dimen/sp_9"
+                        android:background="@drawable/btn_prev"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                <Button
+                        android:id="@+id/btnSubmitJobs"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="@dimen/dp_3"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="@string/submit"
+                        android:textSize="@dimen/sp_9"
+                        android:background="@drawable/btn_bg"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

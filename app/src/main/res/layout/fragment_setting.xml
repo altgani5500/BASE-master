@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@android:color/transparent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/accountSettings"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:textAlignment="viewStart"
+            app:cardElevation="@dimen/dp_8"
+            app:cardCornerRadius="@dimen/dp_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+            <TextView
+                    android:paddingStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_10"
+                    android:text="@string/account_setting"
+                    android:textColor="@color/setting_page_text"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textAlignment="viewStart"
+                    android:gravity="start|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:textAlignment="viewStart"
+            android:id="@+id/crdviewNotify"
+            app:cardElevation="@dimen/dp_8"
+            app:cardCornerRadius="@dimen/dp_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+            <TextView
+                    android:paddingStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_10"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/notifications"
+                    android:textColor="@color/setting_page_text"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textAlignment="viewStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:id="@+id/crd_advancekey"
+            app:cardElevation="@dimen/dp_8"
+            android:textAlignment="viewStart"
+            app:cardCornerRadius="@dimen/dp_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+
+            <TextView
+                    android:paddingStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_10"
+                    android:text="@string/advance_settings"
+                    android:textColor="@color/setting_page_text"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textAlignment="viewStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            app:cardElevation="@dimen/dp_8"
+            android:textAlignment="viewStart"
+            android:id="@+id/add_some_user"
+            app:cardCornerRadius="@dimen/dp_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+
+            <TextView
+                    android:paddingStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_10"
+                    android:text="@string/sub_users"
+                    android:textColor="@color/setting_page_text"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_width="match_parent"
+                    android:textAlignment="viewStart"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            app:cardElevation="@dimen/dp_8"
+            android:textAlignment="viewStart"
+            app:cardCornerRadius="@dimen/dp_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+            <TextView
+                    android:id="@+id/setting_lang"
+                    android:paddingStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_10"
+                    android:text="@string/language"
+                    android:textColor="@color/setting_page_text"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_width="match_parent"
+                    android:textAlignment="viewStart"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/crdLogout"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:textAlignment="viewStart"
+            app:cardElevation="@dimen/dp_8"
+            app:cardCornerRadius="@dimen/dp_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+
+            <TextView
+                    android:paddingStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_10"
+                    android:textAlignment="viewStart"
+                    android:text="@string/logout_me"
+                    android:textColor="@color/setting_page_text"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

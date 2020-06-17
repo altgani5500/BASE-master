@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:flexible="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:id="@+id/ppHeaderLL"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/shadow_bg_two"
+            android:paddingStart="@dimen/dp_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="center_vertical">
+
+            <ImageView
+                    android:id="@+id/profile_backedt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_back_add_jobs" />
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight=".60"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/calander"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/custom_header_title"
+                    android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                    android:id="@+id/calander_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/calendar_mb" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+            android:id="@+id/scrollViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ppHeaderLL"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <!--Calander Views-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/shadow_bg_two"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:gravity="center_vertical|center">
+
+                    <TextView
+                            android:gravity="center_vertical|center"
+                            android:background="@drawable/calander_view_selected"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:id="@+id/txtCurrentPrev"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_9" />
+
+                    <TextView
+                            android:id="@+id/txtCurrentMonth"
+                            android:gravity="center_vertical|center"
+                            android:background="@drawable/calander_view_unselected"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_9" />
+
+                    <TextView
+                            android:id="@+id/txtCurrentNext"
+                            android:gravity="center_vertical|center"
+                            android:background="@drawable/calander_view_selected"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_9" />
+
+
+
+                </LinearLayout>
+
+                <!--calander View-->
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:orientation="vertical">
+
+                    <com.parttime.enterprise.uicomman.enrollcalander.flexiblecalender.flexiblecalendar.FlexibleCalendarView
+                            android:id="@+id/calendar_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            flexible:disableAutoDateSelection="true"
+                            />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_38"
+                        android:gravity="start|center_vertical">
+
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/group_chat"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/custom_header_title"
+                            android:textSize="@dimen/sp_14" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/groupRecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="600dp"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/white" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_70">
+                    <TextView
+                            android:background="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+                </LinearLayout>
+
+            <!--    <include layout="@layout/chat_item_inflator_two"/>
+                <include layout="@layout/chat_item_inflator_two"/>
+                <include layout="@layout/chat_item_inflator_two"/>
+                <include layout="@layout/chat_item_inflator_two"/>
+                <include layout="@layout/chat_item_inflator_two"/>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+            android:id="@+id/bottomViews"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_5">
+
+        <ImageView
+                android:id="@+id/imgClnder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/calendar_ch"
+                android:visibility="gone" />
+        <!--   android:background="@drawable/bg_rounded_bluish_grey"-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_5"
+                android:background="@drawable/bg_rounded_bluish_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_5">
+
+            <EditText
+                    android:id="@+id/inputMsg_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_weight=".80"
+                    android:autofillHints="@string/type_here"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:imeOptions="actionDone"
+                    android:maxLength="100"
+                    android:maxLines="2"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/custom_header_title"
+                    android:textColorHint="@color/hint_bg"
+                    android:textSize="@dimen/sp_10" />
+
+            <ImageView
+                    android:id="@+id/send_Msgss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/send_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

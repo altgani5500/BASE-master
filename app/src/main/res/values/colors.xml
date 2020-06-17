@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4765c0</color>
+    <color name="colorPrimary2">#4765c0</color>
+    <color name="colorPrimaryDark">#4765c0</color>
+    <color name="colorAccent">#4765c0</color>
+    <color name="colorWhite_85">#85ffffff</color>
+   <color name="shadow_bg">#e6f1ff</color>
+    <color name="hint_bg">#99282828</color>
+    <color name="text_bg">#282828</color>
+    <color name="btn_bg">#4765c0</color>
+    <color name="app_white">#ffffff</color>
+    <color name="custom_header_title">#212446</color>
+    <color name="ui_default_bg">#f5f6f9</color>
+    <color name="divider">#e6e6e6</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="sky_light">#ECF1FF</color>
+    <color name="aqua">#25d7ea</color>
+    <color name="selection">#f6f6f8</color>
+    <color name="forgot_pass_text">#a69e9d9d</color>
+    <color name="setting_page_color">#f6f7f9</color>
+    <color name="setting_page_text">#cc282828</color>
+    <color name="prev_btn">#404d4d4d</color>
+
+    <color name="profile_green">#5fe7aa</color>
+    <color name="profile_magenta">#ff6aa2 </color>
+    <color name="profile_blue">#128fe6</color>
+    <color name="profile_yellow">#ffc21d </color>
+    <color name="view_color">#14000000</color>
+    <color name="applied_color">#ff6464</color>
+
+    <!--color Worker Profile-->
+    <color name="color_completed">#4765c0</color>
+    <color name="color_overTime">#19afe6</color>
+    <color name="color_pending">#ffc21d</color>
+    <color name="color_revolution">#ff6464</color>
+
+
+
+    <!--Jobs inflater view color -->
+    <color name="jobs_header_title">#e6212446</color>
+    <color name="jobs_title2_and_desc">#99212446</color>
+    <color name="jobs_title3_and_bottom_text">#cc212446</color>
+
+    // intro slider or walkthrough Slider
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#14a895</color>
+    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#e4b5fc</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen3</item>
+    </array>
+
+    <color name="orange">#ff8f0c</color>
+
+</resources>

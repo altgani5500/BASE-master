@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/shadow_bg_two"
+            android:elevation="@dimen/dp_7"
+            android:paddingStart="@dimen/dp_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="start|center_vertical">
+
+            <ImageView
+                    android:id="@+id/moreBackMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_back_add_jobs" />
+
+            <TextView
+                    android:id="@+id/toolBarTitleMore"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight=".60"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/more"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/custom_header_title"
+                    android:textSize="@dimen/sp_16" />
+
+            <LinearLayout
+                    android:id="@+id/AddSave_pass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".40"
+                    android:gravity="end|center_vertical"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:visibility="gone">
+
+                <Spinner
+                        android:id="@+id/spnToolBarYear"
+                        style="@style/spinner_style2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/jobs_title2_and_desc"
+                        android:entries="@array/select"
+                        android:spinnerMode="dialog"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/sp_12">
+
+                </Spinner>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shadow_bg_two"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/work_hour" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/total_hours_worked"
+                        android:textColor="@color/setting_page_text"
+                        android:textSize="@dimen/sp_13" />
+
+                <TextView
+                        android:id="@+id/txtMoreMonthDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:textColor="@color/colorPrimary2"
+                        android:textColorHint="@color/colorPrimary2"
+                        android:textSize="@dimen/sp_15" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:background="@color/gray" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/weekRecycleView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginEnd="@dimen/dp_10" />
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start|center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/weekly_hours"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/setting_page_text"
+                        android:textSize="@dimen/sp_13" />
+
+                <TextView
+                        android:id="@+id/txtWeeksHours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="start|center_vertical"
+                        android:hint="@string/total_hours_worked"
+                        android:maxLines="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/setting_page_text"
+                        android:textSize="@dimen/sp_13" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/weekListRecycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_20" />
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

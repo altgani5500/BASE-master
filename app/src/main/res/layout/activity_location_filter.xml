@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              tools:context=".uicomman.locationaddress.ActivityLocationFilter">
+
+
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:id="@+id/ll_searchFilterView1"
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:id="@+id/filterBack_location"
+                    android:background="@drawable/ic_back_add_jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/location"
+                    android:layout_weight="1"
+                    android:id="@+id/filterTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:paddingEnd="@dimen/dp_5"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_12"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/reset"
+                    android:gravity="end|center_vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/jobAddTitle_txt1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_below="@+id/ll_searchFilterView1"
+                android:layout_above="@+id/btnloc_filter1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/ll_locationSelectGet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45">
+
+                        <TextView
+                                android:paddingStart="@dimen/dp_10"
+                                android:textSize="@dimen/sp_14"
+                                android:textAlignment="viewStart"
+                                android:gravity="start|center_vertical"
+                                android:textColor="@color/jobs_header_title"
+                                android:text="@string/autodetect"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_weight=".80"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                        />
+                        <Switch
+                                android:id="@+id/locationToggle"
+                                android:layout_weight=".20"
+                                android:layout_width="0dp"
+                                android:checked="false"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/locationToggleText"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_12"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/jobs_header_title"
+                            android:text=""
+                            android:maxLines="3"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/ll_country"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/country"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/country_RecycleView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/ll_state"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/state"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/state_RecycleView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/ll_City"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/city"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/city_RecycleView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+        </LinearLayout>
+
+    <Button
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:id="@+id/btnloc_filter1"
+            android:textColor="@color/app_white"
+            android:text="@string/apply_filter"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp_14"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:fontFamily="@font/montserrat_semibold"
+            android:background="@drawable/btn_bg"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/dp_45"/>
+
+
+
+
+</RelativeLayout>

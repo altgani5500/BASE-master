@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:id="@+id/create_sub_backedt"
+                    android:background="@drawable/ic_back_add_jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/add_sub_user"
+                    android:id="@+id/sub_user_Title"
+                    android:layout_weight=".70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:textAlignment="viewEnd"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_12"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/edit"
+                    android:id="@+id/sub_user_Title_edit"
+                    android:layout_weight=".30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:scrollbars="none"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/white"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/dp_95"
+                        android:layout_height="@dimen/dp_95"
+                        android:layout_gravity="center"
+                        android:background="@drawable/others"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/imgUser_edtProfile_createUser"
+                />
+
+
+                <ImageView
+                        android:background="@drawable/add_image_seven"
+                        android:id="@+id/tvCamera_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.961" app:layout_constraintVertical_bias="0.292"/>
+                <TextView
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imgUser_edtProfile_createUser"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="@string/upload_logo"
+                        android:id="@+id/add_userName"
+                        android:textColor="@color/jobs_header_title"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="@dimen/sp_14"
+                />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imgUser_edtProfile"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="@string/name"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="@dimen/sp_12"/>
+
+                <EditText
+                        android:id="@+id/enter_priseName_profile"
+                        android:imeOptions="actionNext"
+                        android:paddingStart="@dimen/dp_10"
+                        android:textAlignment="viewStart"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/text_bg"
+                        android:textColorHint="@color/jobs_title2_and_desc"
+                        android:hint="@string/enter_user"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:background="@drawable/edittext_bg"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imgUser_edtProfile"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="@string/email_id"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="@dimen/sp_12"/>
+
+                <EditText
+                        android:id="@+id/create_userName"
+                        android:imeOptions="actionNext"
+                        android:paddingStart="@dimen/dp_10"
+                        android:textAlignment="viewStart"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/text_bg"
+                        android:textColorHint="@color/jobs_title2_and_desc"
+                        android:hint="@string/email_id"
+                        android:maxLines="1"
+                        android:inputType="textEmailAddress"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:background="@drawable/edittext_bg"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imgUser_edtProfile"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="@string/password"
+                        android:textColor="@color/jobs_title2_and_desc"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="@dimen/sp_12"/>
+
+                <EditText
+                        android:id="@+id/create_password"
+                        android:imeOptions="actionDone"
+                        android:paddingStart="@dimen/dp_10"
+                        android:textAlignment="viewStart"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/text_bg"
+                        android:textColorHint="@color/jobs_title2_and_desc"
+                        android:hint="@string/password"
+                        android:maxLines="1"
+                        android:inputType="textPassword"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:background="@drawable/edittext_bg"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imgUser_edtProfile"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="@string/roles"
+                        android:textColor="@color/custom_header_title"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/sp_14"/>
+                <RadioGroup
+                        android:orientation="vertical"
+                        android:id="@+id/radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                >
+
+                <RadioButton
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:visibility="gone"
+                        android:id="@+id/inflatorCheckboxOne"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/sp_12"
+                        android:text="@string/scheduler"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                <RadioButton
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:id="@+id/inflatorCheckboxTwo"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/sp_12"
+                        android:text="@string/supervisor"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <RadioButton
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:id="@+id/inflatorCheckboxThree"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/sp_12"
+                        android:text="@string/super_evaluator"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <RadioButton
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:id="@+id/inflatorCheckboxFour"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/sp_12"
+                        android:text="@string/recruiter"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/save_createUser"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="@dimen/sp_14"
+                    android:background="@drawable/btn_bg"
+                    android:textColor="@color/white"
+                    android:text="@string/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

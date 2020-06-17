@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:layout_width="@dimen/dp_280"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:textSize="@dimen/sp_14"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:text="@string/what_s_your_rate"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45">
+
+                <Spinner
+                        style="@style/spinner_style"
+                        android:entries="@array/select_rates"
+                        android:id="@+id/spnrRates"
+                        android:textSize="@dimen/sp_12"
+                        android:spinnerMode="dialog"
+                        android:backgroundTint="@color/text_bg"
+                        android:textAlignment="viewStart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:textSize="@dimen/sp_12"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:text="@string/reason"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <EditText
+                    android:imeOptions="actionNext"
+                    android:id="@+id/edtResionDialog"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textAlignment="viewStart"
+                    android:gravity="start"
+                    android:paddingStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:textColor="@color/text_bg"
+                    android:hint="@string/reason"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:textColorHint="@color/hint_bg"
+                    android:maxLength="230"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:textSize="@dimen/sp_12"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_140"/>
+
+
+        </LinearLayout>
+
+        <Button
+                android:layout_marginTop="@dimen/dp_20"
+                android:id="@+id/btnSubmitTasks"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/dp_3"
+                android:layout_marginEnd="@dimen/dp_3"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/submit"
+                android:textSize="@dimen/sp_12"
+                android:background="@drawable/btn_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

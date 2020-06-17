@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:id="@+id/rltview"
+                android:layout_height="match_parent">
+    <LinearLayout
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+                android:id="@+id/imageView_pinch_image_view_touch"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_marginTop="@dimen/dp_35"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+    >
+
+
+        <com.parttime.enterprise.uicomman.zoomviewpager.TouchImageView
+                android:layout_gravity="center"
+                android:id="@+id/pinch_image_view_touch"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

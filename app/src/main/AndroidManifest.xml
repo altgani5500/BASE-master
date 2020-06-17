@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.parttime.enterprise">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <permission
+            android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+            android:protectionLevel="signature" />
+    <permission
+            android:name="android.permission.INTERACT_ACROSS_USERS"
+            android:protectionLevel="signature" />
+
+    <application
+            android:allowBackup="true"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:requestLegacyExternalStorage="true"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity
+                android:name=".uicomman.enrollworkerprofile.EnrollWorkerProfileActivity"
+                android:label="@string/title_activity_enroll_worker_profile"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.appsearch.AppSearchActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+                android:name=".uicomman.enrollcalander.calandertaskList.ActivityCalanderTaskList"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+                android:name=".uicomman.editschedule.EditSchedulesActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.applicantprofile.ActivityApplicatntUserTaskList"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.notifications.NotificationListActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.locationaddress.CountryListActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.locationaddress.CityListActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.applicantprofile.ActivityApplicatntWorHistoryDetails"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.locationaddress.StateActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.chat.singlechat.SingleChatActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+                android:name=".uicomman.homes.HomeActivity"
+                android:label="@string/title_activity_home"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/places_key" />
+
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+
+        <service
+                android:name=".uicomman.locationaddress.services.FetchAddressIntentService"
+                android:exported="false" />
+
+        <activity
+                android:name=".uicomman.customgoogleplaces.MapsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.subuser.AddSubUserActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.subuser.EditSubUserActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.applicantprofile.webview.ActivityWebView"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.advancesetting.AdvanceSettingActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.accountsettings.AccountAseetingActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.jobsdesc.ActivityJobsPreviewEdit"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.zoomviewpager.TouchImageViewActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+                android:name=".uicomman.zoomviewpager.TouchImageViewActivityFile"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+                android:name=".uicomman.pinchzoom.PinchZoomActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+                android:name=".uicomman.accountsettings.ChangeEditFirstNameActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.accountsettings.ChangeLastNameActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.accountsettings.ChangePasswordActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.accountsettings.ChangeEmailActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.langs.ChangeLanguageActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.editjobs.EditJobActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.SplashActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".uicomman.locationaddress.ActivityLocationFilter"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" /> <!-- Login Activity -->
+        <activity
+                android:name="com.parttime.com.uicomman.auth.LoginActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.applicantfilter.ApplicantFilterActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.subuser.CreateSubUserActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.langs.SelectLanguageActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" /> <!-- walkthrough Screen -->
+        <activity
+                android:name=".uicomman.walkthroughs.WalkThroughActivity"
+                android:label="@string/title_activity_welcome"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" /> <!-- Forgot Screen -->
+        <activity
+                android:name=".uicomman.forgots.ForgotActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.forgots.ForgotEmailActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.addjobs.AddJobsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.profileedit.ProfileEditActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.jobsdesc.ActivityJobsPreview"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.jobdetails.JobDetailsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.notificationSetting.NotificationSettings"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:name=".uicomman.applicantprofile.ApplicantProfileActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+                android:name=".uicomman.enrollcalander.ActivityEnrollCalander"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- <provider
+                 android:name=".helpers.InternalStorageContentProvider"
+                 android:authorities="com.parttime.enterprise"
+                 android:exported="true"/>-->
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="${applicationId}.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths_parttime_enterprise" />
+        </provider>
+
+        <activity
+                android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+                android:name="com.darsh.multipleimageselect.activities.AlbumSelectActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/MultipleImageSelectTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- ************* FIREBASE************ -->
+        <service android:name=".pushnotificaton.MyFirebaseMessegingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".pushnotificaton.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <uses-library
+                android:name="org.apache.http.legacy"
+                android:required="false" />
+
+        <!--M4-->
+        <!--Enroll-->
+        <activity
+                android:name=".uicomman.enrollworkerprofile.enrollmores.EnrollMoreActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+                android:name=".uicomman.enrollworkerprofile.createtask.CreateTaskActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.enrollworkerprofile.enrollprofiledetails.EnrollWorkerTaskDetails"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+                android:name=".uicomman.enrollworkerprofile.EditTaskActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+                android:name=".uicomman.enrollworkerprofile.superevaluatorlist.SuperEvaluatorListActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.schedules.AddSchedulesActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+                android:name=".uicomman.enrollworkerprofile.monthdetails.ActivityMonthDetails"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!--  &lt;!&ndash;For glide&ndash;&gt;
+          <meta-data
+                  android:name="com.parttime.enterprise.helpers.myglides.UnsafeOkHttpGlideModule"
+                  android:value="LibraryGlideModule" />-->
+
+    </application>
+
+</manifest>

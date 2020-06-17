@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:elevation="@dimen/dp_6"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="@dimen/dp_125"
+            android:layout_height="@dimen/dp_125">
+
+        <TextView
+                android:id="@+id/txtMoreMonthName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center|center_vertical"
+                android:hint="December"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_12" />
+
+        <TextView
+                android:id="@+id/txtMoreYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center|center_vertical"
+                android:hint="2019"
+                android:maxLines="1"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_13" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

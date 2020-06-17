@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:id="@+id/ll_searchFilterView2"
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:id="@+id/filterBack_locationa"
+                    android:background="@drawable/ic_back_add_jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                    android:visibility="visible"
+                    android:background="@drawable/search_edit_bg"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_weight="1.6"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:id="@+id/ll_inputSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_35">
+
+                <EditText
+                        android:textAlignment="viewStart"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:textSize="@dimen/sp_10"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/custom_header_title"
+                        android:hint="@string/search"
+                        android:layout_weight=".60"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableStart="@drawable/search"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:background="@null"
+                        android:id="@+id/input_messageSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                />
+
+                <ImageView
+                        android:id="@+id/cancel_Country"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@drawable/cross"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                />
+
+            </LinearLayout>
+
+            <TextView
+                    android:paddingEnd="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_12"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/reset"
+                    android:gravity="end|center_vertical"
+                    android:layout_weight=".30"
+                    android:id="@+id/jobAddTitle_txt3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/ll_searchFilterView2"
+            android:layout_above="@+id/btnCountryloc_filter"
+            android:id="@+id/recycleCountry"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <Button
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:id="@+id/btnCountryloc_filter"
+            android:textColor="@color/app_white"
+            android:text="@string/apply_filter"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp_14"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:fontFamily="@font/montserrat_semibold"
+            android:background="@drawable/btn_bg"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/dp_45"/>
+
+</RelativeLayout>

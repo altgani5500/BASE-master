@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_marginTop="@dimen/dp_3"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_marginStart="@dimen/dp_3"
+                android:layout_marginEnd="@dimen/dp_3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_65">
+
+            <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_65">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="@dimen/dp_45"
+                        app:civ_border_width="@dimen/dp_1"
+                        app:civ_border_color="@color/divider"
+                        android:src="@drawable/others"
+                        android:id="@+id/imageView_enroll"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/dp_8"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                <LinearLayout
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_weight=".60"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/textView5"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/sp_12"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/custom_header_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:maxLength="23"/>
+
+
+                </LinearLayout>
+
+
+                <CheckBox
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:id="@+id/textView7"
+                        android:layout_marginBottom="@dimen/dp_6"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:textAlignment="viewEnd"
+                        android:button="@drawable/circle_checkbox"
+                        android:textSize="@dimen/sp_9"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/custom_header_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

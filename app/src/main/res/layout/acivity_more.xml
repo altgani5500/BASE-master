@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:elevation="@dimen/dp_7"
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:id="@+id/moreBack"
+                    android:background="@drawable/ic_back_add_jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/more"
+                    android:layout_weight=".60"
+                    android:id="@+id/toolBarTitleMore"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                    android:paddingEnd="@dimen/dp_5"
+                    android:gravity="end|center_vertical"
+                    android:layout_weight=".40"
+                    android:id="@+id/AddSave_pass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                <Spinner
+                        android:id="@+id/spnToolBarYear"
+                        style="@style/spinner_style2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/jobs_title2_and_desc"
+                        android:entries="@array/select"
+                        android:spinnerMode="dialog"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/sp_12">
+
+                </Spinner>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/monthRecycleView"
+           android:layout_margin="@dimen/dp_10"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+
+</LinearLayout>

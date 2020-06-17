@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <LinearLayout
+            android:layout_margin="@dimen/dp_3"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_90">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_10"
+                    app:civ_border_width="@dimen/dp_1"
+                    app:civ_border_color="@color/divider"
+                    android:id="@+id/message_pic"
+                    android:src="@drawable/others"
+            />
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_marginStart="@dimen/dp_10"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight=".70"
+                          android:textAlignment="viewStart"
+                          android:text="vikash kumar vikash  "
+                          android:maxLength="12"
+                          android:gravity="start"
+                          android:ellipsize="end"
+                          android:maxLines="1"
+                          android:id="@+id/txtMessageUserName"
+                          android:fontFamily="@font/montserrat_medium"
+                          android:textSize="@dimen/sp_13"
+                          android:textColor="@color/text_bg"
+                />
+
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight=".50"
+                          android:textAlignment="viewEnd"
+                          android:text="17 AM"
+                          android:ellipsize="end"
+                          android:maxLines="1"
+                          android:maxLength="17"
+                          android:layout_marginEnd="@dimen/dp_5"
+                          android:gravity="end"
+                          android:id="@+id/txtMessageUserTime"
+                          android:fontFamily="@font/montserrat_medium"
+                          android:textSize="@dimen/sp_10"
+                          android:textColor="@color/text_bg"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight=".70"
+                          android:textAlignment="viewStart"
+                          android:text="vikash kumar"
+                          android:maxLength="30"
+                          android:ellipsize="end"
+                          android:maxLines="1"
+                          android:gravity="start"
+                          android:id="@+id/txtMessageDesc"
+                          android:fontFamily="@font/montserrat_regular"
+                          android:textSize="@dimen/sp_12"
+                          android:textColor="@color/text_bg"/>
+
+                <TextView android:layout_width="@dimen/dp_20"
+                          android:layout_height="@dimen/dp_20"
+                          android:text="17"
+                          android:ellipsize="end"
+                          android:maxLines="1"
+                          android:maxLength="3"
+                          android:layout_marginEnd="@dimen/dp_5"
+                          android:gravity="center"
+                          android:id="@+id/txtMessageCount"
+                          android:fontFamily="@font/montserrat_medium"
+                          android:textSize="@dimen/sp_10"
+                          android:background="@drawable/text_circle_bg"
+                          android:textColor="@color/white"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4">
+
+    <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_3"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:id="@+id/ll_clickone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="67dp"
+                    android:layout_height="52dp"
+                    app:civ_border_width="@dimen/dp_1"
+                    app:civ_border_color="@color/divider"
+                    android:src="@drawable/others"
+                    android:id="@+id/imageView_appSearch"
+                  />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginStart="@dimen/dp_10"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            <TextView
+                    android:layout_weight =".80"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/sp_12"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTitleAppSearch" />
+
+            <ImageView
+                    android:background="@drawable/message_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgChatAppSearch" />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/sp_10"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/custom_header_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtSubTitleAppSearch"
+            />
+            <TextView
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/sp_10"
+
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:drawableStart="@drawable/location_m"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/custom_header_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtLocationAppSearch"/>
+
+            <TextView
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/sp_10"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/custom_header_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNationalAppSearch"
+                    />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

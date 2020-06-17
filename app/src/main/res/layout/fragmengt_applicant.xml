@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:visibility="visible"
+            android:id="@+id/applicant_recycleViw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_empty_list"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <ImageView
+                android:background="@drawable/applicants_empty_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:gravity="center"
+                android:textSize="@dimen/sp_16"
+                android:text="@string/your_application_list_is_empty"
+                android:layout_marginTop="@dimen/dp_45"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

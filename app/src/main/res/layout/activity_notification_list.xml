@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:id="@+id/profile_backedt"
+                    android:background="@drawable/ic_back_add_jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:background="@color/white"
+            android:id="@+id/recycleView_NotiList"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone"
+            android:id="@+id/ll_empty_list"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <ImageView
+                android:background="@drawable/comming_soon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:gravity="center"
+                android:textSize="@dimen/sp_16"
+                android:text="@string/notificationMsgs"
+                android:layout_marginTop="@dimen/dp_45"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

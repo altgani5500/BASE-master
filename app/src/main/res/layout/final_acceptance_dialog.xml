@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:padding="@dimen/dp_10"
+              android:minWidth="340dp"
+              android:minHeight="360dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <EditText
+                android:imeOptions="actionNext"
+                android:id="@+id/final_acceptence_input"
+                android:paddingTop="@dimen/dp_5"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:paddingStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textColor="@color/text_bg"
+                android:hint="@string/type_here"
+                android:inputType="textMultiLine"
+                android:maxLines="30"
+                android:textColorHint="@color/hint_bg"
+                android:maxLength="1000"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:textSize="@dimen/sp_12"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_140"/>
+
+        <TextView
+                android:textAlignment="viewEnd"
+                android:gravity="end|center_vertical"
+                android:layout_marginTop="@dimen/dp_8"
+                android:id="@+id/applicant_Accept_massage"
+                android:textColor="@color/setting_page_text"
+                android:textSize="@dimen/sp_10"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/thousand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:gravity="start|center_vertical"
+                android:id="@+id/applicant_Accepts"
+                android:textColor="@color/setting_page_text"
+                android:textSize="@dimen/sp_15"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:background="@drawable/rounded_shape_text"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/congrts"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_45"/>
+
+        <Button
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:id="@+id/final_acceptence_btn"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/send"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:background="@drawable/btn_bg"
+                android:layout_height="@dimen/dp_45"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

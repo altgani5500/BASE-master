@@ -1,0 +1,697 @@
+<resources>
+    <string name="app_name">مشروع - مغامرة</string>
+
+    <!--M2 Module String-->
+
+    <!--Walkthrough Screen-->
+    <string name="post_jobs_w">ضف وظيفة جزئية</string>
+    <string name="slide_1_desc">يمكنك اضافة وظيفة جزئية واستقطاب الكفاءات من الشباب/الشابات للعمل في منشأتك</string>
+    <string name="view_and_select_applicants">عرض واختيار المتقدمين</string>
+    <string name="slide_two_desc">يمكنك الاطلاع على سجلات العمل للمتقدمين ومعرفة ساعات العمل المطبقة والمهام المنجزة لكل متقدم قبل قبولهم للوظيفة. تساعد هذه الخاصية في التعرف على اداء المتقدمين في الوظائف السابقة</string>
+    <string name="chat_with_application">تحدث مع المتقدمين</string>
+    <string name="slide_three_desc">يمكنك التواصل مع المتقدمين في حال الرغبة للاستفسارات قبل القبول للمقابلة</string>
+    <string name="add_working_schedule">إضافة جدول العمل</string>
+    <string name="slide_four_desc">يمكنك اضافة جدول عمل ثابت او مرن مع قابلية التحديث اسبوعياً ومناقشة اوقات العمل مع العاملين قبل اعتماد جدول العمل</string>
+    <string name="add_and_evaluates_programs">إضافة وتقييم المهام</string>
+    <string name="slide_five_desc">يمكنك اضافة مهام مستمرة وأخرى محددة بوقت مع امكانية تقييم المهام المناطة للعاملين وحفظها في سجلاتهم. تتيح هذه الخاصية التأكد من الحصول على أفضل اداء للعاملين نظرا لحفظها في سجلاتهم العملية مما يزيد في جودة العمل</string>
+    <string name="view_worker_profiles">عرض ملفات العاملين</string>
+    <string name="slide_six_desc">يمكنك عرض سجلات العاملين والتعرف على ادائهم في العمل</string>
+
+    <!--permission-->
+    // permission util class message
+    <string name="permission_required">الإذن مطلوب</string>
+    <string name="permission_denied">الإذن بالتخزين مرفوض. يمكنك تفعيل الإذن عن طريق الاعدادات.</string>
+    <string name="prmission_alert">البرنامج يحتاج الإذن لتخزين الملفات في ذاكرة الهاتف. هل انت متأكد من عدم رغبتك في اعطاء الإذن؟ </string>
+    <string name="camera_permission">البرنامج يحتاج الى الإذن لأخذ الصور عن طريق كاميرا الهاتف. هل أنت متأكد من عدم رغبتك في اعطاء الإذن؟
+    </string>
+    <string name="location_permission">البرنامج يحتاج الإذن لتحديد موقعك. هل أنت متأكد من عدم رغبتك في اعطاء الإذن؟  </string>
+    <string name="grants">موافق</string>
+    <string name="deny">مرفوض</string>
+
+    <!--Login Screen-->
+    <string name="log_in">تسجيل الدخول</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forgot">لا تتذكر؟</string>
+
+    <!--Home Screen-->
+    <string name="jobs">الوظائف</string>
+    <string name="nav_message">الرسائل</string>
+    <string name="nav_jobs">الوظائف</string>
+    <string name="nav_workers">العاملين</string>
+    <string name="nav_profile">الملف الشخصي</string>
+    <string name="nav_setting">اعدادات</string>
+    <string name="applicatnts_ss">المتقدمين</string>
+    <string name="description">التفاصيل</string>
+    <string name="closed">مغلق</string>
+
+    <!--Add Jobs-->
+    <string name="add_jobs">اضف وظائف</string>
+    <string name="job_title">المسمى الوظيفي</string>
+    <string name="part_time_type">نوع العمل الجزئي</string>
+    <string name="prev">عرض</string>
+    <string name="submit">ارسال</string>
+    <string name="maximum_number_of_applicant_apply">العدد الاقصى للمتقدمين للوظيفة</string>
+    <string name="flexible">مرن</string>
+    <string name="job_description_required">تفاصيل الوظيفة</string>
+    <string name="same_for_all_days">مكرر لجميع الأيام</string>
+    <string name="work_network">شبكة الاتصال في العمل</string>
+    <string name="location">الموقع</string>
+    <string name="branch_name">اسم الفرع</string>
+    <string name="currency">العملة</string>
+    <string name="hourly_rate">سعر ساعات العمل</string>
+    <string name="total_hour_per_week">اجمالي ساعات العمل لكل اسبوع</string>
+    <string name="mins">أقل</string>
+    <string name="maxs">ماكس</string>
+    <string name="requirements">المتطلبات</string>
+    <string name="benifits">الحوافز (اختيارية)</string>
+    <string name="work_guidelines">ضوابط العمل</string>
+    <string name="end_time">وقت الخروج</string>
+    <string name="start_time">وقت الدخول</string>
+    <string name="or">أو</string>
+    <string name="ors">أو</string>
+
+    <!--Edit Jobs-->
+    <string name="edit_jobs_me">تعديل الوظيفة</string>
+    <string name="open_me">متاح للتسجيل</string>
+    <string name="keep_future">اغلاق مع حفظ البيانات لإتاحتها في المستقبل</string>
+    <string name="job_preview">عرض الوظيفة للإطلاع</string>
+    <string name="job_detail">تفاصيل الوظيفة</string>
+    <string name="details_s1">التفاصيل</string>
+    <string name="no_of_applicnts">المتقدمين</string>
+
+    <!--Job Details-->
+    <string name="your_application_list_is_empty">لائحة المتقدمين فارغة</string>
+    <string name="accepted_for_interview">Accepted for an Interview</string>
+    <string name="accept_for_interview">Accept for an interview</string>
+    <string name="final_acceptance">قبول نهائي</string>
+    <string name="work_experience">خبرة العمل</string>
+    <string name="nationality">الجنسية</string>
+    <string name="education_level">مستوى التعليم</string>
+    <string name="applied_on">تقدم للوظيفة</string>
+
+    <!--Enterprise Profile-->
+
+    <string name="enterprise_id">رقم المنشأة</string>
+    <string name="enterprise_name">اسم المنشأة</string>
+    <string name="enterprise_category_industry">مجال عمل المنشأة</string>
+    <string name="general_info">معلومات عامة</string>
+
+    <!--Edit Enterprise Profile-->
+    <string name="upload_logo">قم بارفاق شعار المنشأة</string>
+    <string name="save">حفظ</string>
+
+    <!--Setting-->
+    <string name="sub_users">المستخدمين التابعين</string>
+    <string name="account_settings">اعدادات الحساب</string>
+    <string name="logout_me">تسجيل الخروج</string>
+    <string name="title_notifications">المنبهات</string>
+    <string name="advanced_settings">اعدادات متقدمة</string>
+
+    <!--App Side Validation messages-->
+    <string name="enter_user_name">نأمل ادخال اسم المستخدم</string>
+    <string name="no_more_days_added">لا توجد ايام اضافية</string>
+    <string name="please_add_images">نأمل اضافة صور</string>
+    <string name="please_enter_parttime_type">نأمل اختيار نوع العمل الجزئي</string>
+    <string name="please_enter_job_desc">نأمل ادخال تفاصيل العمل</string>
+    <string name="please_enter_job_location">نأمل ادخال موقع العمل</string>
+    <string name="please_enter_branch">نأمل ادخال اسم الفرع</string>
+    <string name="please_enter_currency">نأمل اختيار العمل</string>
+    <string name="please_enter_hourly_rates">نأمل ادخال اجر الساعة</string>
+    <string name="please_enter_total_hour_per_work">نأمل ادخال مجمل عدد ساعات العمل للأسبوع</string>
+    <string name="please_enter_maximum_number_of_applicant">نأمل ادخال العدد الأقصى للمتقدمين</string>
+    <string name="please_enter_hours_of_experience">نأمل ادخال اجمالي عدد ساعات العمل المطبقة والمطلوبة لكل متقدم</string>
+    <string name="please_enter_user_name">نأمل ادخال اسم المستخدم</string>
+    <string name="please_enter_password">نأمل ادخال كلمة المرور</string>
+    <string name="please_enter_job_requirements">نأمل ادخال متطلبات العمل</string>
+    <string name="please_enter_work_guidelines">نأمل ادخال ضوابط العمل</string>
+    <string name="please_enter_enterpriseName">نأمل ادخال اسم المنشأة</string>
+    <string name="please_select_categories">نأمل الاختيار من القائمة</string>
+    <string name="please_enter_generalinfo">نأمل ادخال المعلومات العامة</string>
+    <string name="please_enter_emailid">نأمل ادخال الايميل المستخدم</string>
+    <string name="please_pass_not_match">كلمة المرور غير مطابقة</string>
+    <string name="please_enter_conf_pass">نأمل ادخال كلمة المرور مرة اخرى</string>
+    <string name="password_must_not_be_empty">كلمة المرور يجب أن لاتكون فارغة</string>
+    <string name="error_generic">حدث خطأ</string>
+    <string name="empty_car_images">نأمل اختيار بحد اقل صورة واحدة</string>
+    <string name="mimum_images_require">فضلاً اضف صورة داخلية لمقر العمل</string>
+    <string name="enter_Job_Title">نأمل ادخال المسمى الوظيفي</string>
+    <string name="branch_name_required">اسم الفرع مطلوب</string>
+    <string name="select_currency">فضلاً اختار العملة</string>
+    <string name="hourly_rate_select">نامل اختيار اجر الساعة</string>
+    <string name="please_select_parttimetype">نأمل اختيار نوع العمل الجزئي من القائمة</string>
+    <string name="please_select_currency">فضلاً اختار العملة</string>
+    <string name="please_select_hourly_rate">نامل اختيار اجر الساعة</string>
+    <string name="select_hour_of_week">نأمل ادخال عدد ساعات العمل للأسبوع</string>
+    <string name="edt_hourly_rate">نأمل اختيار العمل</string>
+    <string name="hourly_rayte_week_select">لا توجد ايام اضافية</string>
+    <string name="maximul_applicants">نأمل ادخال العدد الأقصى للمتقدمين</string>
+    <string name="seek_bar_err">نأمل ادخال اجمالي عدد ساعات العمل المطبقة والمطلوبة لكل متقدe</string>
+    <string name="err_requirements">فضلاً ادخل متطلبات الوظيفة</string>
+    <string name="err_work_guidelines">فضلاً ادخل قوانين وضوابط العمل</string>
+    <string name="prev_requirements">المتطلبات</string>
+    <string name="benefits_msg">فوائد</string>
+    <string name="prev_working_hours">ساعات العمل</string>
+    <string name="job_location_required">موقع عمل صحيح مطلوب</string>
+    <string name="are_you_sure_you_want_to_delete">هل أنت متأكد من رغبتك بحذف الوظيفة؟</string>
+    <string name="wify_user_name">فضلاً ادخل اسم المستخدم لشبكة الاتصال في العمل</string>
+    <string name="logout_message">هل أنت متأكد من رغبتك في تسجيل الخروج؟</string>
+    <string-array name="day">
+        <item>الأحد</item>
+        <item>الأثنين</item>
+        <item>الثلاثاء</item>
+        <item>الأربعاء</item>
+        <item>الخميس</item>
+        <item>الجمعة</item>
+        <item>السبت</item>
+    </string-array>
+    <string name="email_id_validation">ادخل بريدك الالكتروني</string>
+    <string name="passaword_validation_login">ادخل كلمة المرور</string>
+
+    <!--Add Edit Jobs/Validation Page-->
+    <string name="err_picture">فضلاً اضف صورة داخلية لمقر العمل</string>
+    <string name="err_Jobtitle">فضلاً ادخل المسمى الوظيفي</string>
+    <string name="err_partitime_type">فضلاً اختار نوع العمل جزئي</string>
+    <string name="err_jobdesc">فضلاً ادخل الوصف الوظيفي</string>
+    <string name="err_jobLoc">فضلاً ادخل مقر الوظيفة</string>
+    <string name="err_jobcurrency">فضلاً اختار العملة</string>
+    <string name="err_range_hour">فضلاً اختار نطاق ساعات العمل</string>
+    <string name="err_enter_hourly_rate">فضلاً ادخل قيمة الساعة</string>
+    <string name="err_total_workinghours">فضلاً اختار اجمالي عدد ساعات العمل الاسبوعي</string>
+    <string name="err_no_ofapplicant">فضلاً ادخل الحد الاعلى لعدد المتقدمين</string>
+    <string name="err_specyfyhours">فضلاً حدد ساعات العمل</string>
+    <string name="err_valid_startendtime">فضلاً ادخل وقت بداية ونهاية العمل</string>
+    <string name="err_workinghours_off_all_days">فضلاً ادخل ساعات العمل لجميع الأيام</string>
+    <string name="err_wifyUserName">فضلاً ادخل اسم المستخدم لشبكة الاتصال في العمل</string>
+    <string name="err_wifyUserpass">فضلاً ادخل كلمة المرور لشبكة الاتصال في العمل</string>
+    <string name="err_job_requirement">فضلاً ادخل متطلبات الوظيفة</string>
+    <string name="err_guidelines">فضلاً ادخل قوانين وضوابط العمل</string>
+
+    //KtAlert Class
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+
+
+    <string name="title_activity_login">عمليات الدخول</string>
+
+    // intro slider content
+    <string name="title_activity_welcome">الشاشة الرئيسية</string>
+    <string name="next">التالي</string>
+    <string name="skip">تجاوز</string>
+    <string name="start">التالي</string>
+
+
+
+    <string name="play_again_desc">لرؤية شريط الترحيب مرة أخرى ، انتقل إلى الإعدادات -> التطبيقات -> شريط التمرير الترحيبي -> امسح
+                البيانات
+    </string>
+    <string name="play_again"> العب مرة أخرى</string>
+    <string name="title_activity_home">الشاشة الرئيسية</string>
+    <string name="title_home">الصفحة الرئيسية</string>
+    <string name="title_dashboard">لوحة القيادة</string>
+
+    <string name="search">بحث</string>
+    <string name="notification">تنبيهات</string>
+    <string name="post_jobs">اضف وظيفة جزئية</string>
+    <string name="network_message">تأكد من اتصالك بشبكة انترنت فعالة</string>
+
+    <string name="network_error">غير متصل بشبكة الانترنت</string>
+    <string name="password_not_match">كلمة المرور غير متطابقة</string>
+    <string name="empty_confirm_pass">فضلا ادخل كلمة المرور مرة اخرى</string>
+    <string name="error_invalid_password">كلمة المرور يجب أن لا تكون فارغة</string>
+    <string name="empty_password">فضلا ادخل كلمة المرور</string>
+    <string name="empty_dob">الرجاء إدخال تاريخ الميلاد.</string>
+    <string name="error_invalid_phone">يرجى إدخال رقم هاتف صالح.</string>
+    <string name="empty_phone">الرجاء إدخال رقم الهاتف.</string>
+    <string name="error_invalid_email">ادخل بريدك الالكتروني</string>
+    <string name="empty_email">الرجاء إدخال البريد الإلكتروني.</string>
+    <string name="empty_fullname">فضلا ادخل الاسم الثلاثي</string>
+    <string name="lastName">فضلا ادخل الاسم الأخير/العائلة</string>
+    <string name="please_resend_otp">يرجى إعادة إرسال OTP</string>
+    <string name="please_enter_otp">الرجاء إدخال otp صالح.</string>
+    <string name="err_terms_conditions">الرجاء قبول الشروط  amp؛ الظروف</string>
+    <string name="empty_country">فضلا قم باختيار البلد</string>
+    <string name="empty_phone_or_email">الرجاء إدخال البريد الإلكتروني أو رقم الهاتف.</string>
+    <string name="empty_old_pass">الرجاء إدخال كلمة المرور القديمة.</string>
+    <string name="empty_brand">يرجى اختيار العلامة التجارية.</string>
+    <string name="empty_model_name">الرجاء إدخال اسم الموديل.</string>
+    <string name="empty_model_year">يرجى إدخال السنة النموذجية.</string>
+    <string name="empty_odometer">الرجاء إدخال قيمة عداد المسافات.</string>
+    <string name="empty_engine_size">الرجاء إدخال حجم المحرك.</string>
+    <string name="empty_expected_price">الرجاء إدخال السعر المتوقع.</string>
+    <string name="empty_info">الرجاء إدخال معلومات إضافية.</string>
+    <string name="sign_in">تسجيل الدخول</string>
+
+    <string name="sucess_login">تم الدخول بنجاح</string>
+    <string name="forgotType_msg">حدد نسيت النوع الأول</string>
+
+    <string name="settings">ضبط</string>
+    <string name="forgot_page">FORGOT</string>
+    <string name="username_or_password">اسم المستخدم أو كلمة المرور؟</string>
+    <string name="enter_your_registered_email_id">أدخل معرف البريد المسجل الخاص بك</string>
+    <string name="email_id">عنوان الايميل</string>
+
+
+    <string name="jobs_descriptions">الوصف الوظيفي</string>
+
+
+    <string name="working_hours">ساعات العمل</string>
+    <string name="hours_of_experiences">ساعات الخبرة</string>
+    <string name="work_guideline">دليل العمل</string>
+    <string name="profile">الملف المنشأة</string>
+    <string name="edit">تعديل</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+
+    <string name="number_of_applicants">عدد المتقدمين</string>
+    <string name="hourly_rates">اجرة الساعة</string>
+    <string name="device_token_msg">رمز الجهاز فارغ</string>
+
+
+    <string name="camera">كاميرا</string>
+    <string name="gallery">حافظة الصور</string>
+
+
+
+    <string name="cancel_s">إلغاء</string>
+    <string name="delete_s">حذف</string>
+    <string name="yes_s">نعم فعلا</string>
+
+
+
+    <string name="account_setting">اعدادات الحساب</string>
+    <string name="notifications">التنبيهات</string>
+    <string name="advance_settings">الاعدادات المتقدمة</string>
+    <string name="language">اللغة</string>
+    <string name="english">الانجليزية</string>
+    <string name="arabic">العربية</string>
+    <string name="select_language">قم باختيار اللغة</string>
+    <string name="apply">تقدم</string>
+    <string name="enterprise_name_s">اسم المنشأة</string>
+    <string name="enter_name_please">ادخل الاسم الأول</string>
+    <string name="profile_info">ادخل بيانات المنشأة</string>
+
+    <string name="cv_certificate">السيرة الذاتية</string>
+    <string name="all_task">جميع المهام</string>
+    <string name="complete">مكتمل</string>
+    <string name="pendings">تحت المراجعة</string>
+    <string name="in_process">جاري العمل به</string>
+    <string name="total_no_of_hours">اجمالي عدد ساعات العمل</string>
+    <string name="change_language">غير اللغة</string>
+    <string name="done">منتهي</string>
+    <string name="totla_workinghours">اجمالي ساعات العمل</string>
+    <string name="your_joblist_is_empty">لم تقم بإضافة أي وظيفة</string>
+    <string name="chooselanguage">اختر اللغة</string>
+
+
+    <!--Dummy Spinner Value-->
+    <string-array name="select">
+        <item>قم باختيار</item>
+    </string-array>
+
+
+
+
+    <string-array name="week_hour_rate">
+        <item>1-5</item>
+        <item>5-10</item>
+        <item>11-15</item>
+        <item>16-20</item>
+        <item>21+</item>
+        <item>أيا من هذه</item>
+    </string-array>
+    <string name="places_key">AIzaSyC-kBLYO2qpSUj7AloQQ9Z9r4dETFZeDZ4</string>
+
+    <string-array name="hours_perweek">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+
+    </string-array>
+
+    <!--Working hour history-->
+    <string-array name="working_hour_history">
+        <item>أي</item>
+        <item>48+</item>
+        <item>96+</item>
+        <item>288+</item>
+        <item>576+</item>
+        <item>1152+</item>
+    </string-array>
+
+    <!--Gender Array-->
+    <string-array name="gender_array">
+        <item>الذكر</item>
+        <item>إناثا</item>
+        <item>أي</item>
+    </string-array>
+    <!--Age Array-->
+    <string-array name="age_array">
+        <item>أي من الخيار التالي</item>
+        <item>16-19</item>
+        <item>20-25</item>
+        <item>26-35</item>
+        <item>40-60</item>
+    </string-array>
+
+    <!--task Array-->
+    <string-array name="task">
+        <item>الحد الاقصى الى الحد الادنى</item>
+        <item>أي</item>
+    </string-array>
+
+    <!--evolution Array-->
+    <string-array name="evolution">
+        <item>ممتاز</item>
+        <item>جيد جدا</item>
+        <item>جيد</item>
+        <item>ضعيف</item>
+    </string-array>
+
+    <string name="reset">اعادة تعيين</string>
+    <string name="autodetect">اكتشاف تلقائي لموقعك</string>
+    <string name="country">البلد</string>
+    <string name="state">المنطقة</string>
+    <string name="city">المدينة</string>
+    <string name="filter">فلتر</string>
+    <string name="industry">مجال العمل</string>
+    <string name="work_history">تاريخ ساعة العملy</string>
+    <string name="gender">الجنس</string>
+    <string name="age">العمر</string>
+    <string name="education_levels">المستوى التعليمي</string>
+    <string name="loc_by_radious">الموقع المحيط لك</string>
+    <string name="task">المهام</string>
+    <string name="evaluation">التقييم</string>
+    <string name="apply_filter">طبق الفلتر</string>
+    <string name="edit_first_name">تعديل الاسم الاول</string>
+    <string name="edit_last_name">تعديل اسم المنشأة</string>
+    <string name="change_password">غير كلمة السر</string>
+    <string name="change_email_address">تغيير البريد الالكتروني</string>
+    <string name="enter_new_first_name">أدخل الاسم الأول الجديد</string>
+    <string name="enter_new_last_name">أدخل اسم العائلة الجديد</string>
+    <string name="conf_pass">أدخل تأكيد كلمة المرور</string>
+    <string name="new_pass">أدخل كلمة مرور جديدة</string>
+    <string name="enter_old_pass">أدخل كلمة المرور القديمة</string>
+    <string name="new_email">أدخل معرف البريد الإلكتروني الجديد</string>
+    <string name="enroll_workers">العاملين المسجلين</string>
+    <string name="type_here">اكتب هنا...</string>
+    <string name="thousand">1000</string>
+    <string name="congrts">تهانينا</string>
+    <string name="send">ارسال</string>
+    <string name="max_thousand">بحد اقصى 1000</string>
+    <string name="message_required">رسالة الموافقة مطلوبة</string>
+    <string name="education_details">تفاصيل التعليم</string>
+
+    <string name="address_found">تم العثور على العنوان</string>
+    <string name="invalid_lat_long_used">خخطوط الطول والعرض المدخلة غير صحيحة</string>
+    <string name="no_address_found">نأسف، لم يتم العثور على العنوان</string>
+    <string name="no_geocoder_available">لا يوجد رمز جغرافي متاح</string>
+    <string name="no_location_data_provided">لم يتم تقديم بيانات الموقع</string>
+    <string name="service_not_available">نعتذر، هذه الخدمة غير متوفرة</string>
+    <string name="action_geolocate">قم بتحديد الموقع</string>
+    <string name="default_info_title">الموقع الافتراضي</string>
+    <string name="default_info_snippet">لم يتم العثور على أماكن ، لأنه تم تعطيل إذن الموقع.</string>
+
+    <string name="permission_denied_explanation">تم رفض الإذن ، ولكن هناك حاجة إلى الأساسية
+         وظائف.</string>
+    <string name="permission_rationale">مطلوب إذن الموقع للوظيفة الأساسية</string>
+    <string name="your_worklist_is_empty">قائمة العاملين المسجلين فارغة</string>
+    <string name="hours">ساعة</string>
+    <string name="enrolled_workers">العاملين المسجلين</string>
+    <string name="hourly_ratess">الأسعار لكل ساعة</string>
+    <string name="only_to_team_member">فقط لمجموعة الأعضاء</string>
+    <string name="donot_show">لا تعرض</string>
+    <string name="show">أعرض</string>
+    <string name="add_sub_user">اضف مستخدم تابع</string>
+    <string name="your_subuser_is_empty">قائمة المستخدمين التابعين لك فارغة</string>
+    <string name="select_start_time">قم باختيار بداية الوقت</string>
+    <string name="select_date_time_same">بداية ونهاية وقت العمل يجب أن لاتكون متطابقة</string>
+    <string name="file_format">صيغة الملف غير مدعوم</string>
+
+    <string-array name="time_hour">
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+
+    <string-array name="time_min">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+    </string-array>
+
+
+    <!--M3 module-->
+    <string name="name">اسم</string>
+    <string name="enter_user">أدخل الاسم</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="roles">الأدوار</string>
+    <string name="scheduler">مشرف</string>
+    <string name="supervisor">جدولة / المشرف</string>
+    <string name="super_evaluator">سوبر مقيم</string>
+    <string name="recruiter">المجند</string>
+    <string name="notification_settings">اعدادات التنبيهات</string>
+    <string name="message">الرسائل</string>
+    <string name="password_err_new">يجب أن تحتوي كلمة المرور على حرف واحد على الأقل ، وقيمة رقمية واحدة ، وحرف كبير واحد وطول الحد الأدنى يجب أن يكون 6 </string>
+    <string name="title_activity_enroll_worker_profile">عمليات ملفات العاملين المسجلين</string>
+    <string name="no_work_history">لم يتم العثور على تاريخ مسجل لهذا الموظف</string>
+    <string name="no_msg_history">لم يتم العثور على رسائل سابقة</string>
+    <string name="no_search_result">بحث عن مرشحين</string>
+    <string name="wokiking_history_hours">تاريخ ساعة العمل</string>
+    <string name="filter_message">ليس عليك اختيار أي محتوى مرشح</string>
+    <string name="search_err_message">للحصول على نتيجة بحث أفضل ، يجب ألا تقل عن 3 أحرف</string>
+    <string name="select_date">قم باختيار اليوم</string>
+    <string name="dates">تاريخ</string>
+    <string name="evolutions">تقييم</string>
+    <string name="select_end_time">قم باختيار وقت البداية</string>
+    <string name="select_either_flex_or_same">قم باختيار الخيار: مرن أو مكرر لجميع الأيام</string>
+    <string name="notificationMsgs">لاتوجد قائمة بالتنبيهات</string>
+    <string name="type_message">فضلا ادخل الرسالة هنا</string>
+    <string name="all_ready_added_congrts">تم الاضافة مسبقا</string>
+    <string name="add_sub">مستخدم تابع</string>
+    <string name="edit_sub_user">تعديل المستخدم التابع</string>
+
+
+    <!--M4 module-->
+    <string name="calander">التقويم</string>
+    <string name="chat_cal_send_msg">موعد ووقت جدول الاجتماع:</string>
+    <string name="role_msg">غير مصرح لك باستخدام هذه الميزة</string>
+    <string name="to">إلى</string>
+    <string name="froms">من عند</string>
+    <string name="tos">يجب أن تكون ساعة دقيقة أكبر من 0</string>
+    <string name="fromss">لا يمكن أن تكون ساعات الحد الأقصى أقل من دقيقة</string>
+    <string name="applicant_del_msg">"هل أنت متأكد أنك تريد حذف مقدم الطلب؟"</string>
+    <string name="start_time_end_time_validation">يجب أن تكون ساعة النهاية أكبر من ساعة البدء</string>
+    <string name="gps_on">يرجى تشغيل الموقع للحصول على نتيجة أفضل</string>
+    <string name="network_username">اسم مستخدم الشبكة</string>
+    <string name="network_password">كلمة مرور الشبكة</string>
+    <string name="total_hours_worked_per_week">اجمالي ساعات العمل المنجزة في الاسبوع</string>
+    <string name="schedule_log_times"><![CDATA[جدول العمل وسجل الحضور والانصراف]]></string>
+    <string name="more">المزيد</string>
+    <string name="schedule_time">وقت الجدول</string>
+    <string name="log_time">الوقت المجدول</string>
+    <string name="over_time">لوقت الاضافي</string>
+    <string name="task_name">اسم المهمة:</string>
+    <string name="task_type">نوع المهمة</string>
+    <string name="continues">مستمر</string>
+    <string name="completed">منجز</string>
+    <string name="pending">تحت الاجراء</string>
+    <string name="create_task">انشاء مهمة</string>
+    <string name="choose_task_type">قم باختيار نوع المهمة</string>
+    <string name="task_description">شرح المهمة</string>
+    <string name="choose_super_evaluator">حدد المقيم الأعلى</string>
+    <string name="see_all">مشاهدة الكل</string>
+    <string name="execution_date_time"><![CDATA[وقت وتاريخ التنفيذ]]></string>
+    <string name="continuousa">مستمر</string>
+    <string name="timebound">مقيد الوقت</string>
+    <string name="please_select_super_evaluator">فضلا، حدد المقيم الأعلى</string>
+    <string name="please_select_task_date">فضلا، حدد تاريخ المهمة</string>
+    <string name="task_description_err">فضلا، حدد شرح المهمة</string>
+    <string name="err_task_name">فضلا، ادخل اسم المهمة</string>
+    <string name="reevaluates">اعادة تقييم</string>
+    <string name="schedulertask">مسؤول الجدول</string>
+    <string name="rating">التقييم</string>
+    <string name="what_s_your_rate">ما هو تقييمك</string>
+    <string name="reason">السبب</string>
+    <string name="thanks">شكراً</string>
+    <string name="for_your_feedback">لردك</string>
+    <string name="err_resion">فضلا، ادخل السبب</string>
+    <string name="edit_task">تعديل المهمة</string>
+    <string name="add_schedule">اضافة جدول</string>
+    <string name="continuous">مستمر</string>
+    <string name="enroll_users">المستخدمين المسجلين</string>
+    <string name="group_chat">محادثة الاعضاء</string>
+    <string name="space_start_time">وقت البداية</string>
+    <string name="space_end_time"> الى </string>
+    <string name="pms">مساءً</string>
+    <string name="ams">صباحاً</string>
+    <string name="save_all">Select all</string>
+    <string name="err_schedule_enter_one">نأمل ادخال تاريخ الجدول</string>
+    <string name="err_schedue_date_one">نأمل ادخال تاريخ الجدول</string>
+    <string name="err_schedule_start_time">فضلا، قم باختيار بداية الوقت للجدول</string>
+    <string name="err_schedule_end_time">فضلا، قم باختيار بداية الوقت للجدول</string>
+    <string name="err_enroll_user_list">قم باختيار العضو</string>
+    <string name="event_on">الحدث في:</string>
+    <string name="bys">بواسطة:</string>
+    <string name="event">حدث</string>
+    <string name="event_details">وصف الحدث !</string>
+    <string name="total_hours_worked">جمالي ساعات العمل المنجزه</string>
+    <string name="weekly_hours">ساعات الاسبوع</string>
+    <string name="punch_out">تسجيل الانصراف</string>
+    <string name="punch_in">تسجيل الحضور</string>
+    <string name="actual_schedule">الجدول الفعلي</string>
+    <string name="time_calculation">حساب الوقت</string>
+    <string name="undecided">غير محدد</string>
+    <string name="hrss">ساعة</string>
+    <string name="hrs_out_of">ساعة من</string>
+    <string name="hrsaa">ساعة</string>
+    <string name="on_time_status">في الوقت</string>
+    <string name="early_hour_status">ساعة مبكرة</string>
+    <string name="over_time_status">متأخر، بعد فوات الوقت</string>
+    <string name="undecided_status">غير محدد</string>
+    <string name="rejected_status">مرفوض</string>
+    <string name="hrsss">ساعة</string>
+    <string name="err_account_type">الوصول للخاصية غير مسموح. فضلا قم بالترقية للوصول</string>
+    <string name="err_enroll_empty">لايوجد اعضاء لإضافتهم في الجدول</string>
+
+    <string name="times_logs">سجل الوقت</string>
+    <string name="close">أغلق</string>
+    <string name="toss">إلى</string>
+    <string name="times">زمن:</string>
+    <string-array name="select_task_Type">
+        <item>مستمر</item>
+        <item>مقيد الوقت</item>
+    </string-array>
+
+    <string-array name="select_rates">
+        <item>ممتاز</item>
+        <item>جيدجداً</item>
+        <item>جيد</item>
+        <item>ضعيف</item>
+    </string-array>
+
+    <string-array name="calanderview">
+        <item>الاسبوع</item>
+        <item>اليوم</item>
+    </string-array>
+
+    <string-array name="years">
+        <item>كانون الثاني</item>
+        <item>شهر فبراير</item>
+        <item>مارس</item>
+        <item>أبريل</item>
+        <item>مايو</item>
+        <item>يونيو</item>
+        <item>يوليو</item>
+        <item>أغسطس</item>
+        <item>سبتمبر</item>
+        <item>شهر اكتوبر</item>
+        <item>شهر نوفمبر</item>
+        <item>ديسمبر</item>
+    </string-array>
+
+    <string name="rescheduled_status">إعادة جدولتها</string>
+    <string name="revaluation_status">إعادة التقييم</string>
+
+    <string name="pending_evaluation">في انتظار التقييم</string>
+    <string name="there_are_empty_task">لا توجد مهمة الجدول الزمني</string>
+    <string name="edit_schedule">تحرير الجدول</string>
+</resources>

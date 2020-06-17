@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/total_hours_worked_per_week"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/hint_bg"
+                    android:textSize="@dimen/sp_12" />
+
+            <TextView
+                    android:id="@+id/enroll_profile_hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="start|center_vertical"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/setting_page_text"
+                    android:textColorHint="@color/setting_page_text"
+                    android:textSize="@dimen/sp_11" />
+
+            <!--Schedule and log Times-->
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight=".50"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start|center_vertical"
+                        android:text="@string/schedule_log_times"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/hint_bg"
+                        android:textSize="@dimen/sp_12" />
+
+                <TextView
+                        android:id="@+id/txtMoreClick"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight=".50"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="end|center_vertical"
+                        android:text="@string/more"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="@dimen/sp_13" />
+
+            </LinearLayout>
+
+            <!--Dynamic Schedule Data-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:orientation="horizontal">
+                <!--This View Can Replace With Horizontal Recycle View -->
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/taskHisRecycle"
+                        android:scrollbars="none"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!--Schedule Data Hide and Show On the Basis Of parent Item Click-->
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight=".39"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start|center_vertical"
+                        android:text="@string/schedule_time"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/hint_bg"
+                        android:textSize="@dimen/sp_12" />
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight=".30"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="start|center_vertical"
+                        android:text="@string/log_time"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/hint_bg"
+                        android:textSize="@dimen/sp_12" />
+
+                <TextView
+                        android:id="@+id/scheTxtStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight=".30"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="end|center_vertical"
+                        android:text="@string/over_time"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/profile_blue"
+                        android:textSize="@dimen/sp_13" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/scheTxtTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight=".39"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="start|center_vertical"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/setting_page_text"
+                        android:textColorHint="@color/setting_page_text"
+                        android:textSize="@dimen/sp_11" />
+
+                <TextView
+                        android:id="@+id/scheTxtPtime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight=".30"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="start|center_vertical"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/setting_page_text"
+                        android:textColorHint="@color/setting_page_text"
+                        android:textSize="@dimen/sp_11" />
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight=".30"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="end|center_vertical"
+                        android:text="Over time"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/profile_blue"
+                        android:textSize="@dimen/sp_13"
+                        android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <!--TASK LIST DUMMY CONTENT INFLATOR CONTENT WHICH IS REPLACE BY RECYLEVIEW-->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="start|center_vertical"
+                android:text="@string/task"
+                android:textAlignment="viewStart"
+                android:textColor="@color/setting_page_text"
+                android:textSize="@dimen/sp_15" />
+
+        <!--Inflator content for future use-->
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/dp_3"
+                android:id="@+id/recycleWorkerProfileList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:id="@+id/accountSettingbck"
+                    android:background="@drawable/ic_back_add_jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/account_settings"
+                    android:layout_weight="1"
+                    android:id="@+id/filterTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:visibility="gone"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_12"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/reset"
+                    android:gravity="end|center_vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/jobAddTitle_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/ll_edt_firstname"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:cardElevation="@dimen/dp_5"
+                app:cardCornerRadius="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45">
+                <TextView
+                        android:paddingStart="@dimen/dp_10"
+                        android:textSize="@dimen/sp_14"
+                        android:textAlignment="viewStart"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/jobs_header_title"
+                        android:text="@string/edit_first_name"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/ll_edit_last_name"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:cardElevation="@dimen/dp_5"
+                app:cardCornerRadius="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45">
+                <TextView
+                        android:paddingStart="@dimen/dp_10"
+                        android:textSize="@dimen/sp_14"
+                        android:textAlignment="viewStart"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/jobs_header_title"
+                        android:text="@string/edit_last_name"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/ll_changepass"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:cardElevation="@dimen/dp_5"
+                app:cardCornerRadius="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45">
+                <TextView
+                        android:paddingStart="@dimen/dp_10"
+                        android:textSize="@dimen/sp_14"
+                        android:textAlignment="viewStart"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/jobs_header_title"
+                        android:text="@string/change_password"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/ll_change_email"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:cardElevation="@dimen/dp_5"
+                app:cardCornerRadius="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45">
+                <TextView
+                        android:paddingStart="@dimen/dp_10"
+                        android:textSize="@dimen/sp_14"
+                        android:textAlignment="viewStart"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/jobs_header_title"
+                        android:text="@string/change_email_address"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

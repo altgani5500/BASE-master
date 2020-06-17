@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <ImageView
+                  android:src="@drawable/comming_soon"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+    </ImageView>
+
+
+    <TextView
+            android:paddingStart="@dimen/dp_10"
+            android:textSize="@dimen/sp_20"
+            android:text="Coming  Soon.."
+            android:textColor="@color/setting_page_text"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

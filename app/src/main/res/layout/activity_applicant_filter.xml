@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--page header like tool bar-->
+    <LinearLayout
+            android:paddingStart="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shadow_bg_two">
+
+        <LinearLayout
+                android:gravity="start|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:id="@+id/filterBack_filter"
+                    android:background="@drawable/ic_back_add_jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/filter"
+                    android:layout_weight="1"
+                    android:id="@+id/filterTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:paddingEnd="@dimen/dp_5"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textSize="@dimen/sp_12"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/custom_header_title"
+                    android:text="@string/reset"
+                    android:gravity="end|center_vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/jobAddTitle_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:layout_marginBottom="@dimen/dp_20"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45">
+                    <TextView
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/industry"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                    />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/ll_locationSearch"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/ll_loc"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:drawableEnd="@drawable/right_arrow"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/location"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:scrollbars="none"
+                            android:visibility="gone"
+                            android:id="@+id/recycle_Loc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/ll_workhourView"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:drawableEnd="@drawable/drop_down"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/work_history"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+                    <View
+                            android:visibility="gone"
+                            android:id="@+id/workhourView"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:background="@color/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp_5"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:id="@+id/recyleWorkingHour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/ll_viewGender"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:drawableEnd="@drawable/drop_down"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/gender"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+                    <View
+                            android:id="@+id/viewGender"
+                            android:visibility="gone"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:background="@color/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:paddingTop="@dimen/dp_5"
+                            android:visibility="gone"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:id="@+id/recyleGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/ll_ageView"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:drawableEnd="@drawable/drop_down"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/age"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+                    <View
+                            android:visibility="gone"
+                            android:id="@+id/ageView"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:background="@color/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp_5"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:id="@+id/recyleAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/ll_edecationLebvelView"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:drawableEnd="@drawable/drop_down"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/education_levels"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+                    <View
+                            android:id="@+id/edecationLebvelView"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:visibility="gone"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:background="@color/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp_5"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:id="@+id/recyleEducationLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <!--Education Details-->
+                    <TextView
+                            android:visibility="gone"
+                            android:id="@+id/ll_edecationDetailsView"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="Education details"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+                    <View
+                            android:id="@+id/edecationDetailsView"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:visibility="gone"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:background="@color/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp_5"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:id="@+id/recyleEducationDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/ll_nationalityView"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:drawableEnd="@drawable/drop_down"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/nationality"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+
+                    <View
+                            android:visibility="gone"
+                            android:id="@+id/nationalityView"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:background="@color/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp_5"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:id="@+id/recyleNationality"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/ll_locByRadView"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:drawableEnd="@drawable/drop_down"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/loc_by_radious"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+                    <View
+                            android:visibility="gone"
+                            android:id="@+id/locByRadView"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:background="@color/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp_5"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:id="@+id/recyleLocRadius"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/ll_taskView"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:drawableEnd="@drawable/drop_down"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/task"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+                    <View android:visibility="gone"
+                          android:id="@+id/taskView"
+                          android:layout_marginStart="@dimen/dp_10"
+                          android:layout_marginEnd="@dimen/dp_10"
+                          android:background="@color/divider"
+                          android:layout_width="match_parent"
+                          android:layout_height="@dimen/dp_1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp_5"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:id="@+id/recyleTask"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_5"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/ll_evaluationView"
+                            android:paddingStart="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"
+                            android:textAlignment="viewStart"
+                            android:gravity="start|center_vertical"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:drawableEnd="@drawable/drop_down"
+                            android:textColor="@color/jobs_header_title"
+                            android:text="@string/evaluation"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                    />
+                    <View android:visibility="gone"
+                          android:id="@+id/evaluationView"
+                          android:layout_marginStart="@dimen/dp_10"
+                          android:layout_marginEnd="@dimen/dp_10"
+                          android:background="@color/divider"
+                          android:layout_width="match_parent"
+                          android:layout_height="@dimen/dp_1"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp_5"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:id="@+id/recyleEvaluation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:id="@+id/btnLogin_filter"
+                    android:textColor="@color/app_white"
+                    android:text="@string/apply_filter"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/sp_14"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:background="@drawable/btn_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

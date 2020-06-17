@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center|center_vertical"
+        android:background="@drawable/wks_six">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_185"
+            android:gravity="center|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:textAlignment="viewStart"
+                android:gravity="start|center_vertical|center"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_worker_profiles"
+                android:textColor="@color/btn_bg"
+                android:textSize="@dimen/sp_19"
+                android:textAllCaps="true"/>
+
+        <TextView
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical|center"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slide_six_desc"
+                android:textColor="@color/jobs_title3_and_bottom_text"
+                android:textSize="@dimen/sp_12"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
